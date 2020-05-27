@@ -1,0 +1,35 @@
+body,
+html {
+  margin: 0;
+  font-family: sans-serif;
+}
+body header,
+html header {
+  position: relative;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  white-space: nowrap;
+}
+body header h1,
+html header h1 {
+  margin: 0;
+}
+body header p,
+html header p {
+  margin: 0;
+}
+body .intro-section video,
+html .intro-section video {
+  width: 100%;
+}
+body main,
+html main {
+  padding: 20px 40px;
+}
+body main h3,
+html main h3 {
+  font-weight: normal;
+}
