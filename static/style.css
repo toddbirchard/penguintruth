@@ -12,7 +12,8 @@ html header {
 }
 body header .header-wrapper,
 html header .header-wrapper {
-  max-width: 800px;
+  width: 800px;
+  max-width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +24,13 @@ html header .header-wrapper .brand {
   display: flex;
   justify-content: left;
   align-items: center;
+  text-decoration: none;
+}
+body header .header-wrapper .brand *,
+html header .header-wrapper .brand * {
+  text-decoration: none;
+  color: #495064;
+  cursor: pointer;
 }
 body header .header-wrapper .brand h1,
 html header .header-wrapper .brand h1 {
@@ -40,7 +48,7 @@ html header .header-wrapper .brand .organization {
 body header .header-wrapper .brand img,
 html header .header-wrapper .brand img {
   width: 50px;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 body header .header-wrapper nav a,
 html header .header-wrapper nav a {
@@ -61,13 +69,14 @@ html .intro-section video {
 }
 body main,
 html main {
-  padding: 20px 40px;
-  max-width: 800px;
+  padding: 20px 0;
+  width: 800px;
+  max-width: 95%;
   margin: 10px auto;
 }
 body main h2,
 html main h2 {
-  margin: 20px 0 0 0;
+  margin: 20px 0 5px 0;
   font-size: 2.2em;
   color: #525d66;
   font-family: 'futura-pt', sans-serif;
@@ -80,6 +89,7 @@ html main h3 {
   font-family: 'futura-pt', sans-serif;
   font-weight: 500;
   font-size: 1.4em;
+  line-height: 1.1;
 }
 body main p,
 html main p {

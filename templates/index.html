@@ -7,8 +7,8 @@
     <title>{{ .Title }}</title>
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-    <!--<link rel='stylesheet' type="text/css" href="/static/style.css" />-->
-    <link rel='stylesheet' href='https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/css/style.css'/>
+    <link rel='stylesheet' type="text/css" href="/static/style.css"/>
+    <!--<link rel='stylesheet' href='https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/css/style.css'/>-->
     <link rel="stylesheet" href="https://use.typekit.net/pgr6fet.css">
     <link rel="shortcut icon" type="/img/png" href="{{ .Icon }}"/>
     <meta property="og:site_name" content="{{ .Title }}"/>
@@ -32,13 +32,13 @@
 <div class="container">
     <header>
         <div class="header-wrapper">
-            <div class="brand">
-                <img src="{{ .Icon }}" alt="logo" />
+            <a class="brand" href="/">
+                <img src="{{ .Icon }}" alt="logo"/>
                 <div>
                     <h1>{{ .Title }}</h1>
                     <div class="organization">Funded by the Bird Team Association™.</div>
                 </div>
-            </div>
+            </a>
             <nav>
                 <a href="https://www.change.org/penguintruth">Petition</a>
                 <a href="">Teams</a>
@@ -54,16 +54,18 @@
     <main>
         <h2>⚠️ YOU HAVE BEEN LIED TO</h2>
         <h3>Top experts have confirmed that penguins are NOT birds. Here is the evidence:</h3>
-        <p>PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS </p>
+        <p>PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT
+            BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS
+            ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS </p>
     </main>
 </div>
 <script type="text/javascript">
     var _gauges = _gauges || [];
-    (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
+    (function () {
+        var t = document.createElement('script');
+        t.type = 'text/javascript';
         t.async = true;
-        t.id    = 'gauges-tracker';
+        t.id = 'gauges-tracker';
         t.setAttribute('data-site-id', '5ecdddbea560791bb4e90da8');
         t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
         t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
