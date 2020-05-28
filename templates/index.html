@@ -7,7 +7,9 @@
     <title>{{ .Title }}</title>
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-    <link rel='stylesheet' href='https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/css/style.css'/>
+    <link rel='stylesheet' type="text/css" href="/static/style.css" />
+    <!--<link rel='stylesheet' href='https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/css/style.css'/>-->
+    <link rel="stylesheet" href="https://use.typekit.net/pgr6fet.css">
     <link rel="shortcut icon" type="/img/png" href="{{ .Icon }}"/>
     <meta property="og:site_name" content="{{ .Title }}"/>
     <meta property="og:type" content="website"/>
@@ -29,8 +31,19 @@
 <body>
 <div class="container">
     <header>
-        <h1>{{ .Title }}</h1>
-        <p>{{ .TagLine }}</p>
+        <div class="header-wrapper">
+            <div class="brand">
+                <img src="{{ .Icon }}" alt="logo" />
+                <div>
+                    <h1>{{ .Title }}</h1>
+                    <div class="organization">Funded by the Bird Team Association™.</div>
+                </div>
+            </div>
+            <nav>
+                <a href="https://www.change.org/penguintruth">Petition</a>
+                <a href="">Teams</a>
+            </nav>
+        </div>
     </header>
     <section class="intro-section">
         <video class="videoObject center" autoplay loop autobuffer muted playsinline id="myVideo">
@@ -39,7 +52,6 @@
         </video>
     </section>
     <main>
-        <p>PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS </p>
         <h2>⚠️ YOU HAVE BEEN LIED TO</h2>
         <h3>Top experts have confirmed that penguins are NOT birds. Here is the evidence:</h3>
         <p>PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS </p>

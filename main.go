@@ -25,7 +25,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		TagLine:    "Exposing the facts about penguins and their flightless origins.",
 		SiteUrl:    "https://penguintruth.org/",
 		ShareImage: "https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/img/penguin-share@2x.jpg",
-		Icon:       "https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/img/icon.png",
+		Icon:       "https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/img/favicon.png",
 	}
 	tmpl.Execute(w, data)
 }
@@ -34,12 +34,14 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 func Router() *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/", indexHandler)
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	return r
 }
 
 // Initiate web server
 func main() {
 	router := Router()
+
 	srv := &http.Server{
 		Handler:      router,
 		Addr:         "127.0.0.1:9200",

@@ -1,23 +1,59 @@
 body,
 html {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'proxima-nova', sans-serif;
 
   header {
     position: relative;
     background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
     white-space: nowrap;
 
-    h1 {
-      margin: 0;
-    }
+    .header-wrapper {
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
 
-    p {
-      margin: 0;
+      .brand {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        h1 {
+          margin: 0;
+          font-family: 'futura-pt', sans-serif;
+          text-transform: uppercase;
+          color: #495064;
+          line-height: 1;
+          font-size: 2.2em;
+        }
+
+        .organization {
+          line-height: 1;
+        }
+
+        img {
+          width: 50px;
+          margin-right: 20px;
+        }
+      }
+
+      nav {
+        a {
+          text-decoration: none;
+          color: #818fa1;
+          font-weight: 600;
+          font-size: 1.2em;
+          margin-left: 20px;
+          transition: all .2s ease-out;
+
+          &:hover{
+            color: aquamarine;
+          }
+        }
+      }
     }
   }
 
@@ -28,19 +64,24 @@ html {
   }
 
   main {
-    padding: 20px 40px;
-    max-width: 700px;
+    padding: 20px 0;
+    max-width: 800px;
     margin: 10px auto;
 
     h2 {
-      margin: 20px 0 2px 0;
-      font-size: 1.8em;
+      margin: 20px 0 0 0;
+      font-size: 2.2em;
       color: #525d66;
+      font-family: 'futura-pt', sans-serif;
+      line-height: 1;
     }
 
     h3 {
       margin-top: 0;
       color: #525d66;
+      font-family: 'futura-pt', sans-serif;
+      font-weight: 500;
+      font-size: 1.4em;
     }
 
     p {

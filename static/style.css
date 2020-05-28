@@ -1,25 +1,59 @@
 body,
 html {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'proxima-nova', sans-serif;
 }
 body header,
 html header {
   position: relative;
   background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px;
   white-space: nowrap;
 }
-body header h1,
-html header h1 {
-  margin: 0;
+body header .header-wrapper,
+html header .header-wrapper {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
 }
-body header p,
-html header p {
+body header .header-wrapper .brand,
+html header .header-wrapper .brand {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+body header .header-wrapper .brand h1,
+html header .header-wrapper .brand h1 {
   margin: 0;
+  font-family: 'futura-pt', sans-serif;
+  text-transform: uppercase;
+  color: #495064;
+  line-height: 1;
+  font-size: 2.2em;
+}
+body header .header-wrapper .brand .organization,
+html header .header-wrapper .brand .organization {
+  line-height: 1;
+}
+body header .header-wrapper .brand img,
+html header .header-wrapper .brand img {
+  width: 50px;
+  margin-right: 20px;
+}
+body header .header-wrapper nav a,
+html header .header-wrapper nav a {
+  text-decoration: none;
+  color: #818fa1;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-left: 20px;
+  transition: all 0.2s ease-out;
+}
+body header .header-wrapper nav a:hover,
+html header .header-wrapper nav a:hover {
+  color: aquamarine;
 }
 body .intro-section video,
 html .intro-section video {
@@ -28,19 +62,24 @@ html .intro-section video {
 body main,
 html main {
   padding: 20px 40px;
-  max-width: 700px;
+  max-width: 800px;
   margin: 10px auto;
 }
 body main h2,
 html main h2 {
-  margin: 20px 0 2px 0;
-  font-size: 1.8em;
+  margin: 20px 0 0 0;
+  font-size: 2.2em;
   color: #525d66;
+  font-family: 'futura-pt', sans-serif;
+  line-height: 1;
 }
 body main h3,
 html main h3 {
   margin-top: 0;
   color: #525d66;
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 500;
+  font-size: 1.4em;
 }
 body main p,
 html main p {
