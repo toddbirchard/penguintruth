@@ -33,12 +33,17 @@ html header .header-wrapper .brand {
   justify-content: left;
   align-items: center;
   text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+body header .header-wrapper .brand:hover,
+html header .header-wrapper .brand:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 body header .header-wrapper .brand *,
 html header .header-wrapper .brand * {
   text-decoration: none;
   color: #495064;
-  cursor: pointer;
 }
 body header .header-wrapper .brand h1,
 html header .header-wrapper .brand h1 {
@@ -52,6 +57,7 @@ html header .header-wrapper .brand h1 {
 body header .header-wrapper .brand .organization,
 html header .header-wrapper .brand .organization {
   line-height: 1;
+  font-weight: 500;
 }
 body header .header-wrapper .brand img,
 html header .header-wrapper .brand img {
@@ -64,7 +70,7 @@ html header .header-wrapper nav a {
   color: #818fa1;
   font-weight: 600;
   font-size: 1.2em;
-  margin-left: 20px;
+  margin-left: 40px;
   transition: all 0.2s ease-out;
 }
 body header .header-wrapper nav a:hover,
@@ -85,8 +91,10 @@ html main {
 body main .intro,
 html main .intro {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ececec;
 }
 body main .intro .pitt,
 html main .intro .pitt {
@@ -94,22 +102,26 @@ html main .intro .pitt {
   width: 90px;
   margin-right: 20px;
 }
-body main h2,
-html main h2 {
-  margin: 0 0 3px;
+body main .intro h2,
+html main .intro h2 {
+  margin: 0 0 10px;
   font-size: 2.4em;
-  color: #525d66;
-  font-family: 'futura-pt', sans-serif;
+  color: #434d55;
+  font-family: 'proxima-nova', sans-serif;
   line-height: 1;
+}
+body main .intro h3,
+html main .intro h3 {
+  margin: 0 0 2px;
 }
 body main h3,
 html main h3 {
-  margin: 0 0 5px;
+  margin: 0 0 10px;
   color: #525d66;
-  font-family: 'futura-pt', sans-serif;
+  font-family: 'proxima-nova', sans-serif;
   font-weight: 500;
-  font-size: 1.4em;
-  line-height: 1.1;
+  font-size: 1.2em;
+  line-height: 1;
 }
 body main p,
 html main p {
@@ -118,15 +130,15 @@ html main p {
 }
 body main table,
 html main table {
-  width: 90%;
-  margin: 20px auto 40px;
+  width: 100%;
+  margin: 0 auto 40px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-spacing: 0;
 }
 body main table th,
 html main table th {
   text-transform: uppercase;
-  padding: 10px;
+  padding: 15px 10px;
   background: #f0f2f5;
   font-weight: 500;
   font-size: 1.1em;
