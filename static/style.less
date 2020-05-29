@@ -10,6 +10,9 @@ html {
     background: white;
     min-height: 100%;
     box-shadow: 0 1px 15px rgba(39, 44, 49, .15);
+    @media(max-width: 600px) {
+      width: 100%;
+    }
   }
 
   header {
@@ -49,11 +52,17 @@ html {
           color: #495064;
           line-height: 1;
           font-size: 2.2em;
+          @media(max-width: 600px) {
+            font-size: 1.7em;
+          }
         }
 
         .organization {
           line-height: 1;
           font-weight: 500;
+          @media(max-width: 600px) {
+            font-size: .9em;
+          }
         }
 
         img {
@@ -90,6 +99,9 @@ html {
     width: 800px;
     max-width: 95%;
     margin: 10px auto;
+    @media(max-width: 600px) {
+      max-width: 92%;
+    }
 
     .intro {
       display: flex;
@@ -97,11 +109,17 @@ html {
       align-items: center;
       padding-bottom: 20px;
       border-bottom: 1px solid #ececec;
+      @media(max-width: 600px) {
+        flex-direction: column;
+      }
 
       .pitt {
         height: 90px;
         width: 90px;
         margin-right: 20px;
+        @media(max-width: 600px) {
+          margin: 0 0 25px 0;
+        }
       }
 
       h2 {
@@ -110,14 +128,22 @@ html {
         color: #434d55;
         font-family: 'proxima-nova', sans-serif;
         line-height: 1;
+        @media(max-width: 600px) {
+          font-size: 1.7em;
+          text-align: center;
+        }
       }
 
       h3 {
         margin: 0 0 2px;
+        @media(max-width: 600px) {
+          margin: 0 0 15px 0;
+          text-align: center;
+          font-size: 1.1em;
+          line-height: 1.2;
+        }
       }
     }
-
-
 
     h3 {
       margin: 0 0 10px;

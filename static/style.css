@@ -12,6 +12,12 @@ html .container {
   min-height: 100%;
   box-shadow: 0 1px 15px rgba(39, 44, 49, 0.15);
 }
+@media (max-width: 600px) {
+  body .container,
+  html .container {
+    width: 100%;
+  }
+}
 body header,
 html header {
   position: relative;
@@ -54,10 +60,22 @@ html header .header-wrapper .brand h1 {
   line-height: 1;
   font-size: 2.2em;
 }
+@media (max-width: 600px) {
+  body header .header-wrapper .brand h1,
+  html header .header-wrapper .brand h1 {
+    font-size: 1.7em;
+  }
+}
 body header .header-wrapper .brand .organization,
 html header .header-wrapper .brand .organization {
   line-height: 1;
   font-weight: 500;
+}
+@media (max-width: 600px) {
+  body header .header-wrapper .brand .organization,
+  html header .header-wrapper .brand .organization {
+    font-size: 0.9em;
+  }
 }
 body header .header-wrapper .brand img,
 html header .header-wrapper .brand img {
@@ -88,6 +106,12 @@ html main {
   max-width: 95%;
   margin: 10px auto;
 }
+@media (max-width: 600px) {
+  body main,
+  html main {
+    max-width: 92%;
+  }
+}
 body main .intro,
 html main .intro {
   display: flex;
@@ -96,11 +120,23 @@ html main .intro {
   padding-bottom: 20px;
   border-bottom: 1px solid #ececec;
 }
+@media (max-width: 600px) {
+  body main .intro,
+  html main .intro {
+    flex-direction: column;
+  }
+}
 body main .intro .pitt,
 html main .intro .pitt {
   height: 90px;
   width: 90px;
   margin-right: 20px;
+}
+@media (max-width: 600px) {
+  body main .intro .pitt,
+  html main .intro .pitt {
+    margin: 0 0 25px 0;
+  }
 }
 body main .intro h2,
 html main .intro h2 {
@@ -110,9 +146,25 @@ html main .intro h2 {
   font-family: 'proxima-nova', sans-serif;
   line-height: 1;
 }
+@media (max-width: 600px) {
+  body main .intro h2,
+  html main .intro h2 {
+    font-size: 1.7em;
+    text-align: center;
+  }
+}
 body main .intro h3,
 html main .intro h3 {
   margin: 0 0 2px;
+}
+@media (max-width: 600px) {
+  body main .intro h3,
+  html main .intro h3 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.2;
+  }
 }
 body main h3,
 html main h3 {
