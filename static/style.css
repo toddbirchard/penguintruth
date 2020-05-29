@@ -16,7 +16,7 @@ body header,
 html header {
   position: relative;
   background: white;
-  padding: 20px;
+  padding: 20px 30px;
   white-space: nowrap;
   width: -webkit-fill-available;
 }
@@ -82,9 +82,19 @@ html main {
   max-width: 95%;
   margin: 10px auto;
 }
+body main .intro,
+html main .intro {
+  display: flex;
+}
+body main .intro .pitt,
+html main .intro .pitt {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
 body main h2,
 html main h2 {
-  margin: 20px 0;
+  margin: 0 0 3px;
   font-size: 2.2em;
   color: #525d66;
   font-family: 'futura-pt', sans-serif;
@@ -103,4 +113,41 @@ body main p,
 html main p {
   line-height: 1.3em;
   margin: 0 0 25px;
+}
+body main table,
+html main table {
+  width: 85%;
+  margin: 40px auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-spacing: 0;
+}
+body main table th,
+html main table th {
+  text-transform: uppercase;
+  padding: 10px;
+  background: #f0f2f5;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+body main table td,
+html main table td {
+  padding: 10px;
+  text-align: center;
+}
+body main table td:first-of-type,
+html main table td:first-of-type {
+  text-align: left;
+  max-width: 20%;
+}
+body main table i,
+html main table i {
+  font-size: 1.1em;
+}
+body main table .fa-check,
+html main table .fa-check {
+  color: #9fdc9f;
+}
+body main table .fa-times,
+html main table .fa-times {
+  color: #d65858;
 }
