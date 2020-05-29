@@ -2,6 +2,15 @@ body,
 html {
   margin: 0;
   font-family: 'proxima-nova', sans-serif;
+  background: #e2e6ec;
+}
+body .container,
+html .container {
+  width: 1000px;
+  margin: auto;
+  background: white;
+  min-height: 100%;
+  box-shadow: 0 1px 15px rgba(39, 44, 49, 0.15);
 }
 body header,
 html header {
@@ -9,11 +18,10 @@ html header {
   background: white;
   padding: 20px;
   white-space: nowrap;
+  width: -webkit-fill-available;
 }
 body header .header-wrapper,
 html header .header-wrapper {
-  width: 800px;
-  max-width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +84,7 @@ html main {
 }
 body main h2,
 html main h2 {
-  margin: 20px 0 5px 0;
+  margin: 20px 0;
   font-size: 2.2em;
   color: #525d66;
   font-family: 'futura-pt', sans-serif;
@@ -84,7 +92,7 @@ html main h2 {
 }
 body main h3,
 html main h3 {
-  margin-top: 0;
+  margin: 0 0 5px;
   color: #525d66;
   font-family: 'futura-pt', sans-serif;
   font-weight: 500;
@@ -94,4 +102,5 @@ html main h3 {
 body main p,
 html main p {
   line-height: 1.3em;
+  margin: 0 0 25px;
 }
