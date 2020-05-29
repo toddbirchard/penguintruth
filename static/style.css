@@ -85,17 +85,19 @@ html main {
 body main .intro,
 html main .intro {
   display: flex;
+  margin-bottom: 20px;
+  align-items: center;
 }
 body main .intro .pitt,
 html main .intro .pitt {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   margin-right: 20px;
 }
 body main h2,
 html main h2 {
   margin: 0 0 3px;
-  font-size: 2.2em;
+  font-size: 2.4em;
   color: #525d66;
   font-family: 'futura-pt', sans-serif;
   line-height: 1;
@@ -116,8 +118,8 @@ html main p {
 }
 body main table,
 html main table {
-  width: 85%;
-  margin: 40px auto;
+  width: 90%;
+  margin: 20px auto 40px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-spacing: 0;
 }
