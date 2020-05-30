@@ -10,9 +10,7 @@ html {
     background: white;
     min-height: 100%;
     box-shadow: 0 1px 15px rgba(39, 44, 49, .15);
-    @media(max-width: 600px) {
-      width: 100%;
-    }
+    max-width: 100%;
   }
 
   header {
@@ -21,6 +19,9 @@ html {
     padding: 20px 30px;
     white-space: nowrap;
     width: -webkit-fill-available;
+    @media (max-width: 800px) {
+      padding: 20px;
+    }
 
     .header-wrapper {
       display: flex;
@@ -51,32 +52,43 @@ html {
           text-transform: uppercase;
           color: #495064;
           line-height: 1;
-          font-size: 2.2em;
-          @media(max-width: 600px) {
-            font-size: 1.7em;
+          font-size: 2.24em;
+          @media (max-width: 800px) {
+            font-size: 2em;
+          }
+          @media (max-width: 600px) {
+            font-size: 1.8em;
           }
         }
 
         .organization {
           line-height: 1;
-          font-weight: 500;
-          @media(max-width: 600px) {
+          font-weight: 600;
+          color: #495064;
+          @media (max-width: 800px) {
             font-size: .9em;
+          }
+          @media (max-width: 600px) {
+            font-size: .8em;
           }
         }
 
         img {
           width: 50px;
           margin-right: 15px;
+          @media (max-width: 600px) {
+            width: 40px;
+            margin-right: 10px;
+          }
         }
       }
 
       nav {
         a {
           text-decoration: none;
-          color: #818fa1;
+          color: #75879d;
           font-weight: 600;
-          font-size: 1.2em;
+          font-size: 1.3em;
           margin-left: 40px;
           transition: all .2s ease-out;
 
@@ -99,7 +111,10 @@ html {
     width: 800px;
     max-width: 95%;
     margin: 10px auto;
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
+      width: 95%;
+    }
+    @media (max-width: 600px) {
       max-width: 92%;
     }
 
@@ -109,7 +124,7 @@ html {
       align-items: center;
       padding-bottom: 20px;
       border-bottom: 1px solid #ececec;
-      @media(max-width: 600px) {
+      @media (max-width: 800px) {
         flex-direction: column;
       }
 
@@ -117,65 +132,90 @@ html {
         height: 90px;
         width: 90px;
         margin-right: 20px;
-        @media(max-width: 600px) {
+        @media (max-width: 800px) {
           margin: 0 0 25px 0;
         }
       }
 
       h2 {
-        margin: 0 0 10px;
-        font-size: 2.4em;
+        margin: 0;
+        font-size: 2.6em;
         color: #434d55;
         font-family: 'proxima-nova', sans-serif;
         line-height: 1;
-        @media(max-width: 600px) {
-          font-size: 1.7em;
+        @media (max-width: 900px) {
+          font-size: 4.5vw;
+        }
+        @media (max-width: 800px) {
+          font-size: 5.5vw;
           text-align: center;
+          margin-bottom: 5px;
+        }
+        @media (max-width: 600px) {
+          font-size: 1.8em;
         }
       }
 
       h3 {
         margin: 0 0 2px;
-        @media(max-width: 600px) {
+        color: #434d55;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 1.1;
+        @media (max-width: 900px) {
+          font-size: 2.2vw;
+        }
+        @media (max-width: 800px) {
           margin: 0 0 15px 0;
           text-align: center;
           font-size: 1.1em;
-          line-height: 1.2;
+          font-weight: 500;
         }
       }
     }
 
-    h3 {
-      margin: 0 0 10px;
+    & > h3 {
+      margin: 30px 0 12px;
       color: #525d66;
       font-family: 'proxima-nova', sans-serif;
-      font-weight: 500;
-      font-size: 1.2em;
+      font-weight: 600;
+      font-size: 1.4em;
       line-height: 1;
+      @media (max-width: 600px) {
+        margin: 30px 0 11px;
+      }
     }
 
     p {
       line-height: 1.3em;
       margin: 0 0 25px;
+      font-size: 1.05em;
     }
 
     table {
-      width: 100%;
+      width: -webkit-fill-available;
       margin: 0 auto 40px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       border-spacing: 0;
 
-    th {
+      th {
         text-transform: uppercase;
         padding: 15px 10px;
         background: #f0f2f5;
         font-weight: 500;
         font-size: 1.1em;
+
+        &:last-of-type {
+          td {
+            border-bottom: 0;
+          }
+        }
       }
 
       td {
-        padding: 10px;
+        padding: 15px;
         text-align: center;
+        border-bottom: 1px solid #eff2f5;
 
         &:first-of-type {
           text-align: left;
@@ -188,12 +228,11 @@ html {
       }
 
       .fa-check {
-        color: #9fdc9f;
+        color: #7bdb7b;
       }
 
       .fa-times {
-        color: #d65858
-      ;
+        color: #d65858;
       }
     }
   }
