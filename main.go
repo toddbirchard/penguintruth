@@ -34,12 +34,12 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 // Route declaration
 func Router() *mux.Router {
 	var dir string
-	flag.StringVar(&dir, "dir", ".", "the directory to serve files from. Defaults to the current dir")
+	flag.StringVar(&dir, "dir", "assets/", "the directory to serve files from. Defaults to the current dir")
 	flag.Parse()
 
 	r := mux.NewRouter()
 	r.HandleFunc("/", indexHandler)
-	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("assets"))))
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir(dir))))
 	return r
 }
 
