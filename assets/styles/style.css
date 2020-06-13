@@ -70,7 +70,8 @@ html header .header-wrapper .brand h1 {
 @media (max-width: 600px) {
   body header .header-wrapper .brand h1,
   html header .header-wrapper .brand h1 {
-    font-size: 1.8em;
+    font-size: 1.4em;
+    font-weight: 500;
   }
 }
 body header .header-wrapper .brand .organization,
@@ -89,6 +90,7 @@ html header .header-wrapper .brand .organization {
   body header .header-wrapper .brand .organization,
   html header .header-wrapper .brand .organization {
     font-size: 0.8em;
+    display: none;
   }
 }
 body header .header-wrapper .brand img,
@@ -99,7 +101,7 @@ html header .header-wrapper .brand img {
 @media (max-width: 600px) {
   body header .header-wrapper .brand img,
   html header .header-wrapper .brand img {
-    width: 40px;
+    width: 24px;
     margin-right: 10px;
   }
 }
@@ -134,22 +136,21 @@ html .intro-section video {
 }
 body main,
 html main {
-  padding: 20px 0;
+  padding: 40px 0 30px;
   width: 750px;
   max-width: 95%;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 @media (max-width: 800px) {
   body main,
   html main {
     max-width: 85%;
-    margin: 20px auto;
   }
 }
 @media (max-width: 600px) {
   body main,
   html main {
-    padding: 10px 0;
+    padding: 30px 0 20px;
   }
 }
 @media (max-width: 500px) {
@@ -169,7 +170,7 @@ html main .intro {
 @media (max-width: 600px) {
   body main .intro,
   html main .intro {
-    flex-direction: column;
+    display: block;
   }
 }
 body main .intro .pitt,
@@ -215,12 +216,6 @@ html main .intro h2 {
     font-size: 5.6vw;
   }
 }
-@media (max-width: 400px) {
-  body main .intro h2,
-  html main .intro h2 {
-    white-space: nowrap;
-  }
-}
 body main .intro .subtitle,
 html main .intro .subtitle {
   margin: 0 0 2px;
@@ -244,34 +239,47 @@ html main .intro .subtitle {
     text-align: center;
     font-weight: 500;
     line-height: 1;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     justify-content: space-between;
   }
   body main .intro .subtitle:first-of-type,
   html main .intro .subtitle:first-of-type {
-    font-size: 3.62vw;
+    font-size: 3vw;
+    letter-spacing: 0.14vw;
   }
   body main .intro .subtitle:nth-of-type(2),
   html main .intro .subtitle:nth-of-type(2) {
-    font-size: 3.63vw;
+    font-size: 3.2vw;
+    letter-spacing: 0.14vw;
   }
   body main .intro .subtitle:last-of-type,
   html main .intro .subtitle:last-of-type {
-    font-size: 3.63vw;
+    font-size: 3.23vw;
+    letter-spacing: 0.14vw;
   }
 }
 @media (max-width: 500px) {
   body main .intro .subtitle,
   html main .intro .subtitle {
     font-size: 3.75vw !important;
+    letter-spacing: unset !important;
+    width: -webkit-fill-available;
+  }
+  body main .intro .subtitle:first-of-type,
+  html main .intro .subtitle:first-of-type {
+    font-size: 3.55vw !important;
   }
 }
 @media (max-width: 400px) {
   body main .intro .subtitle,
   html main .intro .subtitle {
     display: block;
-    font-size: 4.1vw !important;
     text-align: center;
+    font-size: 4.1vw !important;
+  }
+  body main .intro .subtitle:first-of-type,
+  html main .intro .subtitle:first-of-type {
+    font-size: 3.9vw !important;
   }
 }
 body main .intro .subtitle i,
@@ -283,16 +291,32 @@ html main .intro .subtitle i {
   html main .intro .subtitle i {
     color: #5d6880;
     display: inline;
-    min-width: 25px;
+    min-width: 5%;
     text-align: center;
-    margin-right: 5px;
-    font-size: 0.9em;
+    margin-right: 16px;
+    font-size: 1em;
   }
 }
 @media (max-width: 400px) {
   body main .intro .subtitle i,
   html main .intro .subtitle i {
     display: none;
+  }
+}
+@media (max-width: 600px) {
+  body main .intro .subtitle span,
+  html main .intro .subtitle span {
+    text-align: justify;
+    width: 100%;
+    display: inline-block;
+  }
+}
+@media (max-width: 600px) {
+  body main .intro .subtitle span,
+  html main .intro .subtitle span {
+    text-align: justify;
+    width: unset;
+    display: inline-block;
   }
 }
 body main .page-section,
@@ -404,7 +428,7 @@ html main table .fa-times {
 body .kg-bookmark-card,
 html .kg-bookmark-card {
   margin: 0 auto 30px;
-  border: 1px solid rgba(222, 223, 224, 0.5);
+  border: 1px solid rgba(222, 223, 224, 0.75);
   transition: all 0.2s ease-out;
   display: flex;
 }
