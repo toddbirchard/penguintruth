@@ -24,8 +24,8 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		Title:      "Penguin Truth",
 		TagLine:    "Exposing the facts about penguins and their flightless origins.",
 		SiteUrl:    "https://penguintruth.org/",
-		ShareImage: "https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/img/penguin-share@2x.jpg",
-		Icon:       "https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/img/favicon.png",
+		ShareImage: "/static/img/penguin-share@2x.jpg",
+		Icon:       "/static/img/favicon.png",
 	}
 	tmpl.Execute(w, data)
 }
