@@ -353,6 +353,7 @@ body main .page-section ul,
 html main .page-section ul {
   margin: 6px 0;
   padding: 0 30px;
+  color: #525d65;
 }
 body main .page-section:last-of-type,
 html main .page-section:last-of-type {
