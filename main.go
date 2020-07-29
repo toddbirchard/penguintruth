@@ -28,7 +28,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		ShareImage: "/static/img/penguin-share@2x.jpg",
 		Icon:       "/static/img/favicon.png",
 	}
-	tmpl.Execute(w, data)
+	_ = tmpl.Execute(w, data)
 }
 
 // Route declaration

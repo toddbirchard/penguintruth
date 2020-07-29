@@ -17,3 +17,6 @@ vendor/
 # Etc
 .idea
 .DS_Store
+
+# Binary
+penguintruth
