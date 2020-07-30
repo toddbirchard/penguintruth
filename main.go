@@ -19,7 +19,7 @@ type HomeMetaData struct {
 }
 
 // Render homepage
-func indexHandler(w http.ResponseWriter, r *http.Request) {
+func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 	data := HomeMetaData{
 		Title:      "Penguin Truth",
@@ -38,7 +38,7 @@ func Router() *mux.Router {
 	flag.Parse()
 
 	r := mux.NewRouter()
-	r.HandleFunc("/", indexHandler)
+	r.HandleFunc("/", IndexHandler)
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir(dir))))
 	return r
 }
@@ -46,12 +46,11 @@ func Router() *mux.Router {
 // Initiate web server
 func main() {
 	router := Router()
-
-	srv := &http.Server{
+	client := &http.Server{
 		Handler:      router,
 		Addr:         "127.0.0.1:9200",
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
-	log.Fatal(srv.ListenAndServe())
+	log.Fatal(client.ListenAndServe())
 }
