@@ -416,6 +416,12 @@ html {
     &> div {
       min-width: 32%;
       margin: 10px 0 15px;
+      @media(max-width: 700px) {
+        min-width: 49%;
+      }
+      @media(max-width: @mobile-breakpoint) {
+        min-width: 100%;
+      }
     }
 
     li {
