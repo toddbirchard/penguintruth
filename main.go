@@ -42,11 +42,11 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 
 // Route declaration
 func Router() *mux.Router {
-	staticDir := "/static/styles/"
+	staticDir := "/static/"
 	// Page routes
 	r := mux.NewRouter()
 	r.HandleFunc("/", IndexHandler)
-	r.PathPrefix("/styles/").Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
+	r.PathPrefix(staticDir).Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
 	return r
 }
 
