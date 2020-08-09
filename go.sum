@@ -1,2 +1,6 @@
 github.com/gorilla/mux v1.7.4 h1:VuZ8uybHlWmqV03+zRzdwKL4tUnIp1MAQtp1mIFE1bc=
 github.com/gorilla/mux v1.7.4/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
+github.com/kib357/less-go v0.0.0-20170821073536-9f0400998d19 h1:kwx8C0//2bDoX/hHr4+cHpOyBEX99aJweBblYSW7UK4=
+github.com/kib357/less-go v0.0.0-20170821073536-9f0400998d19/go.mod h1:BJv0fOMxpMX8ltw2Snk2ZXkT2jAZuqiVWTH26coI/N8=
+gopkg.in/olebedev/go-duktape.v2 v2.0.0-20170111160100-7da705daddc2 h1:BOg8Mkv8iCPcItKtM8WuX/Ee8XhwiyKSPd7MNpFVJig=
+gopkg.in/olebedev/go-duktape.v2 v2.0.0-20170111160100-7da705daddc2/go.mod h1:49+vU0FGsGAwwgHtKGNhM6cCUiIZqvbrGKuW9GaLFQo=
