@@ -31,25 +31,22 @@ type HomeMetaData struct {
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 	data := HomeMetaData{
-		Title:       "Penguin Truth",
-		TagLine:     "Exposing the facts about penguins and their flightless origins.",
-		SiteUrl:     "https://penguintruth.org/",
-		ShareImage:  "/static/img/penguin-share@2x.jpg",
-		Icon:        "/static/img/favicon.png",
+		Title:      "Penguin Truth",
+		TagLine:    "Exposing the facts about penguins and their flightless origins.",
+		SiteUrl:    "https://penguintruth.org/",
+		ShareImage: "/static/img/penguin-share@2x.jpg",
+		Icon:       "/static/img/favicon.png",
 	}
 	_ = tmpl.Execute(w, data)
 }
 
 // Route declaration
 func Router() *mux.Router {
-	// Choose the folder to serve
 	staticDir := "/static/"
-
-	// Create the route
-
+	// Page routes
 	r := mux.NewRouter()
 	r.HandleFunc("/", IndexHandler)
-	r.PathPrefix(staticDir).Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
+	r.PathPrefix("/").Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
 	return r
 }
 
