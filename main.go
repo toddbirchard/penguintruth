@@ -46,7 +46,7 @@ func Router() *mux.Router {
 	// Page routes
 	r := mux.NewRouter()
 	r.HandleFunc("/", IndexHandler)
-	r.PathPrefix("/").Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
+	r.PathPrefix("/styles/").Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
 	return r
 }
 
