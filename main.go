@@ -42,7 +42,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 
 // Route declaration
 func Router() *mux.Router {
-	staticDir := "/static/"
+	staticDir := "/static/styles/"
 	// Page routes
 	r := mux.NewRouter()
 	r.HandleFunc("/", IndexHandler)
