@@ -28,7 +28,7 @@ html {
   header {
     position: relative;
     background: white;
-    padding: 20px 30px;
+    padding: 25px 40px;
     white-space: nowrap;
     width: -webkit-fill-available;
     @media (max-width: 800px) {
@@ -101,16 +101,17 @@ html {
         .nav-link {
           text-decoration: none;
           color: white !important;
-          padding: 5px 10px;
-          font-weight: 500;
-          font-size: 1.3em;
-          margin-left: 40px;
-          transition: all 0.2s ease-out;
+          padding: 6px 12px;
+          font-weight: 400;
+          font-size: 1.2em;
+          transition: all .2s ease-out;
           background: @red;
+          border: 1px inset @red;
           box-shadow: 1px 2px 0 #650f13;
-          letter-spacing: .5px;
+          letter-spacing: 1px;
           @media (max-width: 600px) {
-            display: none;
+            font-size: .9em;
+            padding: 4px 8px;
           }
 
           &:hover {
@@ -130,7 +131,7 @@ html {
   }
 
   main {
-    padding: 40px 0 30px;
+    padding: 30px 0;
     width: 750px;
     max-width: 95%;
     margin: 0 auto;
@@ -153,9 +154,10 @@ html {
       border-bottom: 1px solid #ececec;
       @media (max-width: @mobile-breakpoint) {
         display: block;
+        font-size: .9em;
       }
 
-      .pitt {
+      .anti {
         height: 90px;
         width: 90px;
         margin-right: 20px;
@@ -165,7 +167,7 @@ html {
       }
 
       h2 {
-        margin: 0;
+        margin: 0 0 5px;
         font-size: 2.5em;
         color: #434d55;
         font-family: @header-font;
@@ -274,7 +276,7 @@ html {
       margin: 45px 0;
 
       h3 {
-        margin: 30px 0 8px;
+        margin: 30px 0 15px;
         color: #525d66;
         font-family: @body-font;
         font-weight: 600;
@@ -311,6 +313,9 @@ html {
       margin: 0 0 25px;
       font-size: 1em;
       opacity: .7;
+      @media(max-width: @mobile-breakpoint) {
+        font-size: .9em;
+      }
     }
 
     table {
@@ -409,23 +414,33 @@ html {
   }
 
   .bird-lists {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    @media (max-width: @tablet-breakpoint) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: @mobile-breakpoint) {
+      grid-template-columns: 1fr;
+    }
 
-    &> div {
+    & > div {
       min-width: 32%;
       margin: 10px 0 15px;
-      @media(max-width: 700px) {
+      @media (max-width: 700px) {
         min-width: 49%;
       }
-      @media(max-width: @mobile-breakpoint) {
+      @media (max-width: @mobile-breakpoint) {
         min-width: 100%;
       }
     }
 
     li {
       margin-bottom: 3px;
+      @media (max-width: @mobile-breakpoint) {
+        font-size: .9em;
+      }
     }
   }
 
@@ -435,6 +450,8 @@ html {
     border: 1px solid rgba(222, 223, 224, .75);
     transition: all 0.2s ease-out;
     display: flex;
+    border-radius: 3px;
+    overflow: hidden;
     @media (max-width: @mobile-breakpoint) {
       flex-direction: column-reverse;
     }

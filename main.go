@@ -10,7 +10,8 @@ import (
 	"time"
 )
 
-func CompileStyles() {
+// Compile and minify .LESS files
+func CompileStylesheets() {
 	staticFolder := "./static/styles/%s"
 	err := less.RenderFile(fmt.Sprintf(staticFolder, "style.less"), fmt.Sprintf(staticFolder, "style.css"), map[string]interface{}{"compress": true})
 	if err != nil {
@@ -24,10 +25,11 @@ type HomeMetaData struct {
 	TagLine    string
 	SiteUrl    string
 	ShareImage string
+	MainImage  string
 	Icon       string
 }
 
-// Render homepage
+// Render homepage template
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 	data := HomeMetaData{
@@ -35,6 +37,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		TagLine:    "Exposing the facts about penguins and their flightless origins.",
 		SiteUrl:    "https://penguintruth.org/",
 		ShareImage: "/static/img/penguin-share@2x.jpg",
+		MainImage:  "/static/img/antipenguin@2x.png",
 		Icon:       "/static/img/favicon.png",
 	}
 	_ = tmpl.Execute(w, data)
@@ -52,7 +55,7 @@ func Router() *mux.Router {
 
 // Initiate web server
 func main() {
-	CompileStyles()
+	CompileStylesheets()
 	router := Router()
 	client := &http.Server{
 		Handler:      router,
