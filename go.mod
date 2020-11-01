@@ -1,4 +1,4 @@
-module github.com/hackersandslackers/penguintruth
+module github.com/toddbirchard/penguintruth
 
 go 1.15
 
