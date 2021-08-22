@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-// Compile and minify .LESS files
+// CompileStylesheets Compile and minify .LESS files
 func CompileStylesheets() {
 	staticFolder := "./static/styles/%s"
 	err := less.RenderFile(fmt.Sprintf(staticFolder, "style.less"), fmt.Sprintf(staticFolder, "style.css"), map[string]interface{}{"compress": true})
@@ -19,7 +19,7 @@ func CompileStylesheets() {
 	}
 }
 
-// Dynamic template values
+// HomeMetaData Dynamic template values
 type HomeMetaData struct {
 	Title      string
 	TagLine    string
@@ -29,7 +29,7 @@ type HomeMetaData struct {
 	Icon       string
 }
 
-// Render homepage template
+// IndexHandler Render homepage template
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 	data := HomeMetaData{
@@ -43,7 +43,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	_ = tmpl.Execute(w, data)
 }
 
-// Route declaration
+// Router Route declaration
 func Router() *mux.Router {
 	staticDir := "/static/"
 	// Page routes
