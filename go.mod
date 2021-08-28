@@ -11,3 +11,5 @@ require (
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/olebedev/go-duktape.v2 v2.0.0-20170111160100-7da705daddc2 // indirect
 )
+
+require gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect

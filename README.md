@@ -9,3 +9,9 @@
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/penguintruth.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=GitHub)](https://github.com/toddbirchard/penguintruth/network)
 
 ![Penguin Truth](./.github/penguinshare@2x.jpg?raw=true)
+
+There is no greater honor in team sports than an organization to earn the title of Bird Team. A Bird Team is a sports franchise affiliated with birds and similar avian varieties such as Eagles, Flyers, Seahawks, and so forth. This flying fraternity of brothers has experienced collective success in their respective sports which is simply unrivaled.
+
+There are those who believe that flightless failures such as Penguins should be granted membership to the high-flying Bird Team alliance, which simply will not be tolerated.
+
+Petition: https://www.change.org/p/nhl-exclude-penguins-from-bird-team-classification
