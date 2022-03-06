@@ -1,12 +1,12 @@
 @tablet-breakpoint: 800px;
 @mobile-breakpoint: 600px;
 @transition: all 0.2s ease-out;
-@theme-color: #e30811;
+@theme-color: #cd0f17;
 @body-font: 'proxima-nova', sans-serif;
 @body-font-book: 'proxima-nova', sans-serif;
 @header-font: 'futura-pt', sans-serif;
 @table-font: 'Inter', sans-serif;
-@red: #e30811;
+@red: #cd0f17;
 @grey: #495064;
 
 
@@ -274,9 +274,10 @@ html {
 
     .page-section {
       margin: 45px 0;
+      margin: 45px 0;
 
       h3 {
-        margin: 30px 0 15px;
+        margin: 30px 0 20px;
         color: #525d66;
         font-family: @body-font;
         font-weight: 600;
@@ -416,8 +417,8 @@ html {
   .bird-lists {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 15px;
+    row-gap: 15px;
     @media (max-width: @tablet-breakpoint) {
       grid-template-columns: 1fr 1fr;
     }
@@ -427,7 +428,7 @@ html {
 
     & > div {
       min-width: 32%;
-      margin: 10px 0 15px;
+      margin: 0 0 15px;
       @media (max-width: 700px) {
         min-width: 49%;
       }
