@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
-	"github.com/toddbirchard/birdteams/home"
+	"github.com/toddbirchard/penguintruth/home"
 	"log"
 	"net/http"
 	"os"
