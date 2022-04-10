@@ -300,8 +300,12 @@ html {
 
       ul {
         margin: 6px 0;
-        padding: 0 20px;
+        padding: 0 0 0 20px;
         color: #525d65;
+
+        li {
+            font-size: .9em;
+        }
       }
 
       &:last-of-type {
@@ -310,7 +314,7 @@ html {
     }
 
     p {
-      line-height: 1.3em;
+      line-height: 1.4em;
       margin: 0 0 25px;
       font-size: 1em;
       opacity: .7;
@@ -438,10 +442,8 @@ html {
     }
 
     li {
-      margin-bottom: 3px;
-      @media (max-width: @mobile-breakpoint) {
-        font-size: .9em;
-      }
+      margin-bottom: 5px;
+      font-size: .9em;
     }
   }
 
