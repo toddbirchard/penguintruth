@@ -1,4 +1,4 @@
-module github.com/toddbirchard/birdteams
+module github.com/toddbirchard/penguintruth
 
 go 1.18
 
