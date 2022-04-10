@@ -1,5 +1,7 @@
 github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
 github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
+github.com/joho/godotenv v1.4.0 h1:3l4+N6zfMWnkbPEXKng2o2/MR5mSwTrBih4ZEkkz1lg=
+github.com/joho/godotenv v1.4.0/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
 github.com/kib357/less-go v0.0.0-20170821073536-9f0400998d19 h1:kwx8C0//2bDoX/hHr4+cHpOyBEX99aJweBblYSW7UK4=
 github.com/kib357/less-go v0.0.0-20170821073536-9f0400998d19/go.mod h1:BJv0fOMxpMX8ltw2Snk2ZXkT2jAZuqiVWTH26coI/N8=
 github.com/kr/pretty v0.2.1 h1:Fmg33tUaq4/8ym9TJN1x7sLJnHVwhP33CNkpYV/7rwI=
