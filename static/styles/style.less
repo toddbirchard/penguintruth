@@ -106,7 +106,7 @@ html {
           font-size: 1.2em;
           transition: all .2s ease-out;
           background: @red;
-          border: 1px inset @red;
+          border: 1px solid @red;
           box-shadow: 1px 2px 0 #650f13;
           letter-spacing: 1px;
           @media (max-width: 600px) {
@@ -133,7 +133,6 @@ html {
   main {
     padding: 30px 0;
     width: 750px;
-    max-width: 95%;
     margin: 0 auto;
     @media (max-width: @tablet-breakpoint) {
       max-width: 85%;
@@ -155,6 +154,8 @@ html {
       @media (max-width: @mobile-breakpoint) {
         display: block;
         font-size: .9em;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
       }
 
       .anti {
@@ -277,7 +278,7 @@ html {
       margin: 45px 0;
 
       h3 {
-        margin: 30px 0 20px;
+        margin: 30px 0 15px;
         color: #525d66;
         font-family: @body-font;
         font-weight: 600;
@@ -300,11 +301,11 @@ html {
 
       ul {
         margin: 6px 0;
-        padding: 0 0 0 20px;
+        padding: 0 0 0 15px;
         color: #525d65;
 
         li {
-            font-size: .9em;
+            font-size: .85em;
         }
       }
 
@@ -409,8 +410,8 @@ html {
     }
 
     i {
-      margin-right: 8px;
-      font-size: .9em;
+      margin-right: 5px;
+      font-size: .8em;  
     }
 
     h4 {
@@ -443,7 +444,7 @@ html {
 
     li {
       margin-bottom: 5px;
-      font-size: .9em;
+      font-size: .85em;
     }
   }
 
