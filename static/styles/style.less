@@ -5,7 +5,7 @@
 @body-font: 'proxima-nova', sans-serif;
 @body-font-book: 'proxima-nova', sans-serif;
 @header-font: 'futura-pt', sans-serif;
-@table-font: 'Inter', sans-serif;
+@table-font: 'Inter-Regular', sans-serif;
 @red: #cd0f17;
 @grey: #495064;
 
@@ -17,7 +17,7 @@ html {
   background: #e2e6ec;
 
   .container {
-    width: 900px;
+    width: 850px;
     margin: auto;
     background: white;
     min-height: 100%;
@@ -131,19 +131,8 @@ html {
   }
 
   main {
-    padding: 30px 0;
-    width: 750px;
+    padding: 30px;
     margin: 0 auto;
-    @media (max-width: @tablet-breakpoint) {
-      max-width: 85%;
-    }
-    @media (max-width: @mobile-breakpoint) {
-      padding: 30px 0 20px;
-    }
-
-    @media (max-width: 500px) {
-      max-width: 90%;
-    }
 
     .intro {
       display: flex;
@@ -206,7 +195,7 @@ html {
           font-weight: 500;
           line-height: 1;
           margin-bottom: 5px;
-          justify-content: space-between;
+          align-items: center;
           &:first-of-type {
             font-size: 3vw;
             letter-spacing: .14vw;
@@ -278,11 +267,11 @@ html {
       margin: 45px 0;
 
       h3 {
-        margin: 30px 0 15px;
+        margin: 30px 0 10px;
         color: #525d66;
         font-family: @body-font;
         font-weight: 600;
-        font-size: 1.5em;
+        font-size: 1.7em;
         line-height: 1;
         @media (max-width: 600px) {
           margin: 30px 0 11px;
@@ -292,6 +281,7 @@ html {
 
       h4 {
         color: #525d65;
+        white-space: nowrap;
       }
 
       .list-header {
@@ -306,6 +296,7 @@ html {
 
         li {
             font-size: .85em;
+            white-space: nowrap;
         }
       }
 
@@ -316,7 +307,7 @@ html {
 
     p {
       line-height: 1.4em;
-      margin: 0 0 25px;
+      margin: 0 0 20px;
       font-size: 1em;
       opacity: .7;
       @media(max-width: @mobile-breakpoint) {
@@ -338,7 +329,7 @@ html {
         font-size: .8em;
         font-family: @table-font;
         border: 1px solid rgba(222, 223, 224, .8);
-        font-weight: 400;
+        font-weight: 600;
         border-bottom: 0;
         border-right: 0;
         line-height: 1.7;
@@ -383,6 +374,10 @@ html {
       .bird-column,
       .penguin-column {
         width: 90px;
+
+        @media (max-width: @mobile-breakpoint) {
+          width: 70px;
+        }
       }
 
       i {
@@ -393,7 +388,7 @@ html {
         color: #7bdb7b;
       }
 
-      .fa-times {
+      .fa-xmark {
         color: #d65858;
       }
     }
@@ -410,7 +405,7 @@ html {
     }
 
     i {
-      margin-right: 5px;
+      margin-right: 8px;
       font-size: .8em;  
     }
 
@@ -432,7 +427,7 @@ html {
     }
 
     & > div {
-      min-width: 32%;
+      min-width: 30%;
       margin: 0 0 15px;
       @media (max-width: 700px) {
         min-width: 49%;
@@ -522,14 +517,19 @@ html {
         width: stretch;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 1.1em;
+        font-size: 1.3em;
         font-weight: 600;
         letter-spacing: 0.4px;
-        line-height: 1.2;
+        line-height: 1;
         text-decoration: none;
         color: #434d55;
         @media (max-width: @mobile-breakpoint) {
           font-size: 1em;
+        }
+
+        i {
+          font-size: .8em;
+          margin-left: 2px;
         }
       }
 
@@ -541,10 +541,10 @@ html {
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 475px;
-        margin: 10px 0 12px;
+        margin: 20px 0 20px;
         font-family: @body-font-book;
         font-weight: 400;
-        line-height: 1.2;
+        line-height: 1.3;
         color: #434d55;
         font-size: .9em;
         @media (max-width: @tablet-breakpoint) {

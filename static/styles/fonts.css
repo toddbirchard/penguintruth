@@ -1,17 +1,15 @@
 @font-face {
-    font-family: 'Inter';
-    font-style:  normal;
-    font-weight: 300;
+    font-family: 'Inter-Light';
+    font-style: normal;
     font-display: swap;
-    src: url("https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/fonts/Inter-Light.woff2") format("woff2"),
-    url("https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/fonts/Inter-Light.woff") format("woff");
+    src: url("/static/fonts/Inter-Light.woff2") format("woff2"),
+        url("/static/fonts/Inter-Light.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Inter';
-    font-style:  normal;
-    font-weight: 400;
+    font-family: 'Inter-Regular';
+    font-style: normal;
     font-display: swap;
-    src: url("https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/fonts/Inter-Regular.woff2") format("woff2"),
-    url("https://hackers-content.nyc3.digitaloceanspaces.com/sites/penguintruth/fonts/Inter-Regular.woff") format("woff");
+    src: url("/static/fonts/Inter-Regular.woff2") format("woff2"),
+        url("/static/fonts/Inter-Regular.woff") format("woff");
 }

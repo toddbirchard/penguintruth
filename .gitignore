@@ -23,3 +23,7 @@ vendor/
 
 # Binary
 penguintruth
+birdteams
+
+# Creds
+gcloud.json
