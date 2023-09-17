@@ -6,6 +6,8 @@
 @body-font-book: 'proxima-nova', sans-serif;
 @header-font: 'futura-pt', sans-serif;
 @table-font: 'Inter-Regular', sans-serif;
+@color-green-checkbox: #24c545;
+@color-red-checkbox: #de3a3a;
 @red: #cd0f17;
 @grey: #495064;
 
@@ -70,7 +72,6 @@ html {
           }
           @media (max-width: 600px) {
             font-size: 1.4em;
-            font-weight: 500;
           }
         }
 
@@ -136,6 +137,10 @@ html {
     padding: 30px;
     margin: 0 auto;
 
+    @media (max-width: 600px) {
+      padding: 20px;
+    }
+
     .intro {
       display: flex;
       margin-bottom: 30px;
@@ -164,6 +169,7 @@ html {
         color: #434d55;
         font-family: @header-font;
         line-height: 1;
+        white-space: nowrap;
         @media (max-width: 800px) {
           font-size: 4.3vw;
           margin-bottom: 5px;
@@ -173,7 +179,6 @@ html {
         @media (max-width: 600px) {
           margin-bottom: 8px;
           font-size: 5.3vw;
-          white-space: unset;
         }
         @media (max-width: 500px) {
           font-size: 5.6vw;
@@ -198,6 +203,7 @@ html {
           line-height: 1;
           margin-bottom: 5px;
           align-items: center;
+          white-space: nowrap;
           &:first-of-type {
             font-size: 3vw;
             letter-spacing: .14vw;
@@ -297,7 +303,7 @@ html {
         color: #525d65;
 
         li {
-            font-size: .85em;
+            font-size: .9em;
             white-space: nowrap;
         }
       }
@@ -387,12 +393,12 @@ html {
         font-size: 1.1em;
       }
 
-      .fa-check {
-        color: #7bdb7b;
+      .fa-square-check {
+        color: @color-green-checkbox;
       }
 
-      .fa-xmark {
-        color: #d65858;
+      .fa-square-xmark {
+        color: @color-red-checkbox;
       }
     }
   }
@@ -437,12 +443,13 @@ html {
       }
       @media (max-width: @mobile-breakpoint) {
         min-width: 100%;
+        margin: 0 0 5px;
       }
     }
 
     li {
       margin-bottom: 5px;
-      font-size: .85em;
+      font-size: .9em;
     }
   }
 
