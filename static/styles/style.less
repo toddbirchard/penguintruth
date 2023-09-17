@@ -28,7 +28,7 @@ html {
   header {
     position: relative;
     background: white;
-    padding: 25px 40px;
+    padding: 25px;
     white-space: nowrap;
     width: -webkit-fill-available;
     @media (max-width: 800px) {
@@ -109,9 +109,11 @@ html {
           border: 1px solid @red;
           box-shadow: 1px 2px 0 #650f13;
           letter-spacing: 1px;
+          border-radius: 4px;
+          line-height: 1;
           @media (max-width: 600px) {
-            font-size: .9em;
-            padding: 4px 8px;
+            font-size: 1em;
+            padding: 6px 10px;
           }
 
           &:hover {
@@ -326,8 +328,6 @@ html {
       th {
         padding: 6px 10px;
         background: #f0f2f5;
-        font-size: .8em;
-        font-family: @table-font;
         border: 1px solid rgba(222, 223, 224, .8);
         font-weight: 600;
         border-bottom: 0;
@@ -355,7 +355,7 @@ html {
         border-bottom: 0;
         border-right: 0;
         font-family: @table-font;
-        font-size: .8em;
+        font-size: .9em;
         line-height: 1.7;
         @media (max-width: @mobile-breakpoint) {
           font-size: .8em;
@@ -374,10 +374,13 @@ html {
       .bird-column,
       .penguin-column {
         width: 90px;
+        font-weight: 600;
 
         @media (max-width: @mobile-breakpoint) {
           width: 70px;
         }
+
+
       }
 
       i {
@@ -541,7 +544,7 @@ html {
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 475px;
-        margin: 20px 0 20px;
+        margin: 15px 0 20px;
         font-family: @body-font-book;
         font-weight: 400;
         line-height: 1.3;
