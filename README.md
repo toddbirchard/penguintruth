@@ -17,4 +17,4 @@ There are those who believe that flightless failures such as Penguins should be 
 
 ----
 
-**Petition:** https://www.change.org/p/nhl-exclude-penguins-from-bird-team-classification
+**Petition:** [https://www.change.org/p/nhl-exclude-penguins-from-bird-team-classification](ttps://www.change.org/p/nhl-exclude-penguins-from-bird-team-classification)
