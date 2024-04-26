@@ -1,299 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{ .Title }}</title>
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="/static/styles/fonts.css"
+    <meta name="HandheldFriendly" content="True" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="/static/styles/style.css"
-    />
-    <script src="https://kit.fontawesome.com/4c75e2d691.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/pgr6fet.css">
-    <link
-        rel="shortcut icon"
-        type="/img/png"
-        href="{{ .Icon }}"
-    />
-    <meta property="og:site_name" content="{{ .Title }}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="{{ .Title }}"/>
-    <meta property="og:description" content="{{ .TagLine }}"/>
-    <meta property="og:url" content="{{ .SiteUrl }}"/>
-    <meta property="og:image" content="{{ .ShareImage }}"/>
-    <meta property="og:image:width" content="1000"/>
-    <meta property="og:image:height" content="523"/>
-    <meta name="twitter:title" content="{{ .Title }}"/>
-    <meta name="twitter:description" content="{{ .TagLine }}"/>
-    <meta name="twitter:url" content="{{ .SiteUrl }}"/>
-    <meta name="twitter:site" content="@hackersslackers"/>
-    <meta name="twitter:creator" content="@toddrbirchard"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="{{ .ShareImage }}"/>
-</head>
+    <link rel="stylesheet" type="text/css" href="/static/styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/4c75e2d691.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/pgr6fet.css" />
+    <link rel="shortcut icon" type="/img/png" href="{{ .Icon }}" />
+    <meta property="og:site_name" content="{{ .Title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .TagLine }}" />
+    <meta property="og:url" content="{{ .SiteUrl }}" />
+    <meta property="og:image" content="{{ .ShareImage }}" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="523" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:description" content="{{ .TagLine }}" />
+    <meta name="twitter:url" content="{{ .SiteUrl }}" />
+    <meta name="twitter:site" content="@hackersslackers" />
+    <meta name="twitter:creator" content="@toddrbirchard" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ .ShareImage }}" />
+    <script
+      defer
+      data-domain="penguintruth.org"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
 
-<body>
-<div class="container">
-    <header>
+  <body>
+    <div class="container">
+      <header>
         <div class="header-wrapper">
-            <a class="brand" href="/">
-                <img src="{{ .Icon }}" alt="logo"/>
-                <div>
-                    <h1>{{ .Title }}</h1>
-                    <div class="organization">Funded by the Bird Team Association™.</div>
-                </div>
-            </a>
-            <nav>
-                <a href="https://www.change.org/penguintruth" class="nav-link">Petition</a>
-            </nav>
-        </div>
-    </header>
-    <section class="intro-section">
-        <video
-                class="videoObject center"
-                autoplay
-                loop
-                autobuffer
-                muted
-                playsinline
-                id="myVideo"
-        >
-            <source
-                src="https://storage.googleapis.com/penguintruth/mov/penguintruth.mp4"
-                type="video/mp4">
-        </video>
-    </section>
-    <main>
-        <div class="intro">
-            <img
-                class="anti"
-                src="{{ .MainImage }}"
-                alt="anti-penguin"/>
+          <a class="brand" href="/">
+            <img src="{{ .Icon }}" alt="logo" />
             <div>
-                <h2>PENGUINS ARE NOT A BIRD TEAM</h2>
-                <div class="subtitle">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <span>Flightless foreigners threaten our Aerial Ancestry.</span>
-                </div>
-                <div class="subtitle">
-                    <i class="fas fa-fist-raised"></i>
-                    <span>The Heavens are our Hallowed Heritage.</span>
-                </div>
-                <div class="subtitle">
-                    <i class="fas fa-user-slash"></i>
-                    <span>Vanquish all vermin that are bound to the ground.</span>
-                </div>
+              <h1>{{ .Title }}</h1>
+              <div class="organization">
+                Funded by the Bird Team Association™.
+              </div>
             </div>
+          </a>
+          <nav>
+            <a href="https://www.change.org/penguintruth" class="nav-link">
+              Petition
+            </a>
+          </nav>
         </div>
-        <p>Eagles. Hawks. Falcons. Raptors. For generations, the world of sports has been dominated by an unstoppable
-            alliance of aerial athletes. Even in the darkest of times, these fearlessly feathered fowls used the
-            miraculous gift of flight to embody the single quality which defines America: Freedom. </p>
-        <section class="page-section">
-            <h3>Let's look at the FACTS:</h3>
-            <table>
-                <thead>
-                <tr>
-                    <th></th>
-                    <th class="bird-column"><span>Birds</span></th>
-                    <th class="penguin-column"><span>Penguins</span></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><span>Can fly</span></td>
-                    <td class="bird-column"><i class="fa-sharp fa-solid fa-square-check"></i></td>
-                    <td class="penguin-column"><i class="fa-sharp fa-solid fa-square-xmark"></i></td>
-                </tr>
-                <tr>
-                    <td><span>Have REAL feathers</span></td>
-                    <td class="bird-column"><i class="fa-sharp fa-solid fa-square-check"></i></td>
-                    <td class="penguin-column"><i class="fa-sharp fa-solid fa-square-xmark"></i></td>
-                </tr>
-                <tr>
-                    <td><span>Superbowl champions</span></td>
-                    <td class="bird-column"><i class="fa-sharp fa-solid fa-square-check"></i></td>
-                    <td class="penguin-column"><i class="fa-sharp fa-solid fa-square-xmark"></i></td>
-                </tr>
-                <tr>
-                    <td><span>Jungle Juice Cup Champions</span></td>
-                    <td class="bird-column"><i class="fa-sharp fa-solid fa-square-check"></i></td>
-                    <td class="penguin-column"><i class="fa-sharp fa-solid fa-square-xmark"></i></td>
-                </tr>
-                <tr>
-                    <td><span>CAWWWWWWWWWWW</span></td>
-                    <td class="bird-column"><i class="fa-sharp fa-solid fa-square-check"></i></td>
-                    <td class="penguin-column"><i class="fa-sharp fa-solid fa-square-xmark"></i></td>
-                </tr>
-                <tr>
-                    <td><span>Top O' Da League</span></td>
-                    <td class="bird-column"><i class="fa-sharp fa-solid fa-square-check"></i></td>
-                    <td class="penguin-column"><i class="fa-sharp fa-solid fa-square-xmark"></i></td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="page-section">
-            <h3 class="list-header">Official List of Bird Teams</h3>
-            <div class="bird-lists">
-                <div>
-                    <div class="sport-header"><i class="fas fa-football-ball"></i> <h4>NFL</h4></div>
-                    <ul>
-                        <li>Philadelphia Eagles</li>
-                        <li>Atlanta Falcons</li>
-                        <li>Arizona Cardinals</li>
-                        <li>Baltimore Ravens</li>
-                        <li>Seattle Seahawks</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fas fa-baseball-ball"></i> <h4>MLB</h4></div>
-                    <ul>
-                        <li>Toronto Blue Jays</li>
-                        <li>St. Louis Cardinals</li>
-                        <li>Baltimore Orioles</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fas fa-basketball-ball"></i> <h4>NBA</h4></div>
-                    <ul>
-                        <li>New Orleans Pelicans</li>
-                        <li>Atlanta Hawks</li>
-                        <li>Toronto Raptors (it's true)</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fas fa-hockey-puck"></i> <h4>NHL</h4></div>
-                    <ul>
-                        <li>Philadelphia Flyers</li>
-                        <li>Detroit Redwings</li>
-                        <li>Anaheim Ducks</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fas fa-futbol"></i> <h4>EPL</h4></div>
-                    <ul>
-                        <li>Liverpool LiverBirds</li>
-                        <li>Brighten & Hove Seagulls</li>
-                        <li>Crystal Palace Eagles</li>
-                        <li>Newcastle Magpies</li>
-                        <li>Tottenham Hotspur Cocks (jk lol)</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fa-solid fa-cricket-bat-ball"></i> <h4>Fake Sports</h4></div>
-                    <ul>
-                        <li>St. Louis BattleHawks</li>
-                        <li>Connacht Rugby Eagles</li>
-                        <li>Namibia Rugby Fish Eagles</li>
-                        <li>Namibia National Cricket Eagles</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fa-solid fa-goal-net"></i> <h4>EFL</h4></div>
-                    <ul>
-                        <li>Swansea City Swans</li>
-                        <li>Cardiff City Bluebirds</li>
-                        <li>West Bromwich Albion Baggies</li>
-                        <li>Sheffield Wednesday Owls</li>
-                        <li>Oldham Athletic Owls</li>
-                        <li>Norwich City Canaries</li>
-                        <li>Coventry City Phoenixes</li>
-                        <li>Bristol City Robins</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fa-solid fa-earth-americas"></i> <h4>World Footy</h4></div>
-                    <ul>
-                        <li>Benfica Eagles</li>
-                        <li>Eintracht Frankfurt</li>
-                        <li>OGC Nice</li>
-                        <li>NS.S.C. Bari Cockerels</li>
-                        <li>Minnesota United Loons</li>
-                        <li>DC United Eagles</li>
-                        <li>Inter Miami CF Flamingos</li>
-                        <li>Portimonense S.C. Birds (?)</li>
-                        <li>Palermo F.C. Birds (?)</li>
-                        <li>Al Ahly SC Birds (?)</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="sport-header"><i class="fa-solid fa-baseball-bat-ball"></i> <h4>MiLB</h4></div>
-                    <ul>
-                        <li>Great Lakes Loons</li>
-                        <li>Puebla Parakeets</li>
-                        <li>Charleston Dirty Birds</li>
-                        <li>Delmarva Shorebirds</li>
-                        <li>Rochester Red Wings</li>
-                        <li>Toledo Mud Hens</li>
-                        <li>Akron RubberDucks</li>
-                        <li>Memphis Redbirds</li>
-                        <li>Oklahoma City RedHawks</li>
-                    </ul>
-                </div>
-                
+      </header>
+      <section class="intro-section">
+        <video
+          class="videoObject center"
+          autoplay
+          loop
+          autobuffer
+          muted
+          playsinline
+          id="myVideo"
+        >
+          <source
+            src="https://storage.googleapis.com/penguintruth/mov/penguintruth.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </section>
+      <main>
+        <div class="intro">
+          <img class="anti" src="{{ .MainImage }}" alt="anti-penguin" />
+          <div>
+            <h2>PENGUINS ARE NOT A BIRD TEAM</h2>
+            <div class="subtitle">
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>Flightless foreigners threaten our Aerial Ancestry.</span>
             </div>
+            <div class="subtitle">
+              <i class="fas fa-fist-raised"></i>
+              <span>The Heavens are our Hallowed Heritage.</span>
+            </div>
+            <div class="subtitle">
+              <i class="fas fa-user-slash"></i>
+              <span>Vanquish all vermin that are bound to the ground.</span>
+            </div>
+          </div>
+        </div>
+        <p>
+          Eagles. Hawks. Falcons. Raptors. For generations, the world of sports
+          has been dominated by an unstoppable alliance of aerial athletes. Even
+          in the darkest of times, these fearlessly feathered fowls used the
+          miraculous gift of flight to embody the single quality which defines
+          America: Freedom.
+        </p>
+        <section class="page-section">
+          <h3>Let's look at the FACTS:</h3>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th class="bird-column"><span>Birds</span></th>
+                <th class="penguin-column"><span>Penguins</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span>Can fly</span></td>
+                <td class="bird-column">
+                  <i class="fa-sharp fa-solid fa-square-check"></i>
+                </td>
+                <td class="penguin-column">
+                  <i class="fa-sharp fa-solid fa-square-xmark"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>Have REAL feathers</span></td>
+                <td class="bird-column">
+                  <i class="fa-sharp fa-solid fa-square-check"></i>
+                </td>
+                <td class="penguin-column">
+                  <i class="fa-sharp fa-solid fa-square-xmark"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>Superbowl champions</span></td>
+                <td class="bird-column">
+                  <i class="fa-sharp fa-solid fa-square-check"></i>
+                </td>
+                <td class="penguin-column">
+                  <i class="fa-sharp fa-solid fa-square-xmark"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>Jungle Juice Cup Champions</span></td>
+                <td class="bird-column">
+                  <i class="fa-sharp fa-solid fa-square-check"></i>
+                </td>
+                <td class="penguin-column">
+                  <i class="fa-sharp fa-solid fa-square-xmark"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>CAWWWWWWWWWWW</span></td>
+                <td class="bird-column">
+                  <i class="fa-sharp fa-solid fa-square-check"></i>
+                </td>
+                <td class="penguin-column">
+                  <i class="fa-sharp fa-solid fa-square-xmark"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>Top O' Da League</span></td>
+                <td class="bird-column">
+                  <i class="fa-sharp fa-solid fa-square-check"></i>
+                </td>
+                <td class="penguin-column">
+                  <i class="fa-sharp fa-solid fa-square-xmark"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
         <section class="page-section">
-            <h3>Take Action NOW</h3>
-            <figure class="kg-card kg-bookmark-card">
-                <a class="kg-bookmark-container"
-                   href="https://www.change.org/p/nhl-exclude-penguins-from-bird-team-classification">
-                    <div class="kg-bookmark-content">
-                        <div class="kg-bookmark-title">Sign the Petition <i class="fa-sharp fa-solid fa-pen-nib"></i></div>
-                        <div class="kg-bookmark-description">Exclude Penguins from being classified as Birds under the <b>Aves</b> class of animal, and Bird Teams by extension.</div>
-                        <div class="kg-bookmark-metadata">
-                            <a href="https://static.change.org/favicons/favicon-114x114.png" data-caption="">
-                                <img class="kg-bookmark-icon"
-                                     src="https://static.change.org/favicons/favicon-114x114.png" alt="" data-rjs="2">
-                            </a>
-                            <div class="authors">
-                                <span class="kg-bookmark-author">Broiest Bro started this petition to NHL</span>
-                                <span class="kg-bookmark-publisher">Change.org</span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="kg-bookmark-thumbnail">
-                        <img src="https://assets.change.org/photos/2/om/xo/KMOMxoSTWdJyuYv-1600x900-noPad.jpg?1590647683"
-                             alt="" data-rjs="2">
-                    </div>
-                </a>
-            </figure>
+          <h3 class="list-header">Official List of Bird Teams</h3>
+          <div class="bird-lists">
+            <div>
+              <div class="sport-header">
+                <i class="fas fa-football-ball"></i>
+                <h4>NFL</h4>
+              </div>
+              <ul>
+                <li>Philadelphia Eagles</li>
+                <li>Atlanta Falcons</li>
+                <li>Arizona Cardinals</li>
+                <li>Baltimore Ravens</li>
+                <li>Seattle Seahawks</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fas fa-baseball-ball"></i>
+                <h4>MLB</h4>
+              </div>
+              <ul>
+                <li>Toronto Blue Jays</li>
+                <li>St. Louis Cardinals</li>
+                <li>Baltimore Orioles</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fas fa-basketball-ball"></i>
+                <h4>NBA</h4>
+              </div>
+              <ul>
+                <li>New Orleans Pelicans</li>
+                <li>Atlanta Hawks</li>
+                <li>Toronto Raptors (it's true)</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fas fa-hockey-puck"></i>
+                <h4>NHL</h4>
+              </div>
+              <ul>
+                <li>Philadelphia Flyers</li>
+                <li>Detroit Redwings</li>
+                <li>Anaheim Ducks</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fas fa-futbol"></i>
+                <h4>EPL</h4>
+              </div>
+              <ul>
+                <li>Liverpool LiverBirds</li>
+                <li>Brighten & Hove Seagulls</li>
+                <li>Crystal Palace Eagles</li>
+                <li>Newcastle Magpies</li>
+                <li>Tottenham Hotspur Cocks (jk lol)</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fa-solid fa-cricket-bat-ball"></i>
+                <h4>Fake Sports</h4>
+              </div>
+              <ul>
+                <li>St. Louis BattleHawks</li>
+                <li>Connacht Rugby Eagles</li>
+                <li>Namibia Rugby Fish Eagles</li>
+                <li>Namibia National Cricket Eagles</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fa-solid fa-goal-net"></i>
+                <h4>EFL</h4>
+              </div>
+              <ul>
+                <li>Swansea City Swans</li>
+                <li>Cardiff City Bluebirds</li>
+                <li>West Bromwich Albion Baggies</li>
+                <li>Sheffield Wednesday Owls</li>
+                <li>Oldham Athletic Owls</li>
+                <li>Norwich City Canaries</li>
+                <li>Coventry City Phoenixes</li>
+                <li>Bristol City Robins</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fa-solid fa-earth-americas"></i>
+                <h4>World Footy</h4>
+              </div>
+              <ul>
+                <li>Benfica Eagles</li>
+                <li>Eintracht Frankfurt</li>
+                <li>OGC Nice</li>
+                <li>NS.S.C. Bari Cockerels</li>
+                <li>Minnesota United Loons</li>
+                <li>DC United Eagles</li>
+                <li>Inter Miami CF Flamingos</li>
+                <li>Portimonense S.C. Birds (?)</li>
+                <li>Palermo F.C. Birds (?)</li>
+                <li>Al Ahly SC Birds (?)</li>
+              </ul>
+            </div>
+            <div>
+              <div class="sport-header">
+                <i class="fa-solid fa-baseball-bat-ball"></i>
+                <h4>MiLB</h4>
+              </div>
+              <ul>
+                <li>Great Lakes Loons</li>
+                <li>Puebla Parakeets</li>
+                <li>Charleston Dirty Birds</li>
+                <li>Delmarva Shorebirds</li>
+                <li>Rochester Red Wings</li>
+                <li>Toledo Mud Hens</li>
+                <li>Akron RubberDucks</li>
+                <li>Memphis Redbirds</li>
+                <li>Oklahoma City RedHawks</li>
+              </ul>
+            </div>
+          </div>
         </section>
         <section class="page-section">
-            <h3>Further Sources & Evidence</h3>
-            <p>PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE
-                NOT
-                BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS
-                PENGUINS
-                ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS </p>
+          <h3>Take Action NOW</h3>
+          <figure class="kg-card kg-bookmark-card">
+            <a
+              class="kg-bookmark-container"
+              href="https://www.change.org/p/nhl-exclude-penguins-from-bird-team-classification"
+            >
+              <div class="kg-bookmark-content">
+                <div class="kg-bookmark-title">
+                  Sign the Petition <i class="fa-sharp fa-solid fa-pen-nib"></i>
+                </div>
+                <div class="kg-bookmark-description">
+                  Exclude Penguins from being classified as Birds under the
+                  <b>Aves</b> class of animal, and Bird Teams by extension.
+                </div>
+                <div class="kg-bookmark-metadata">
+                  <a
+                    href="https://static.change.org/favicons/favicon-114x114.png"
+                    data-caption=""
+                  >
+                    <img
+                      class="kg-bookmark-icon"
+                      src="https://static.change.org/favicons/favicon-114x114.png"
+                      alt=""
+                      data-rjs="2"
+                    />
+                  </a>
+                  <div class="authors">
+                    <span class="kg-bookmark-author"
+                      >Broiest Bro started this petition to NHL</span
+                    >
+                    <span class="kg-bookmark-publisher">Change.org</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kg-bookmark-thumbnail">
+                <img
+                  src="https://assets.change.org/photos/2/om/xo/KMOMxoSTWdJyuYv-1600x900-noPad.jpg?1590647683"
+                  alt=""
+                  data-rjs="2"
+                />
+              </div>
+            </a>
+          </figure>
         </section>
-    </main>
+        <section class="page-section">
+          <h3>Further Sources & Evidence</h3>
+          <p>
+            PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS
+            PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS
+            PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS
+            PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS PENGUINS ARE NOT BIRDS
+            PENGUINS ARE NOT BIRDS
+          </p>
+        </section>
+      </main>
     </div>
-
-    <script type="text/javascript">
-        var _gauges = _gauges || [];
-        (function () {
-            var t = document.createElement('script');
-            t.type = 'text/javascript';
-            t.async = true;
-            t.id = 'gauges-tracker';
-            t.setAttribute('data-site-id', '5ecdddbea560791bb4e90da8');
-            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
-            t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(t, s);
-        })();
-    </script>
-</body>
-
+  </body>
 </html>

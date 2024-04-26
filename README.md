@@ -9,7 +9,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/penguintruth.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/toddbirchard/penguintruth/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/penguintruth.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=GitHub)](https://github.com/toddbirchard/penguintruth/network)
 
-![Penguin Truth](./.github/penguinshare@2x.jpg?raw=true)
+![Penguin Truth](./.github/penguinshare@2x.jpg)
 
 There is no greater honor in team sports than an organization to earn the title of Bird Team. A Bird Team is a sports franchise affiliated with birds and similar avian varieties such as Eagles, Flyers, Seahawks, and so forth. This flying fraternity of brothers has experienced collective success in their respective sports which is simply unrivaled.
 

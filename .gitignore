@@ -17,10 +17,9 @@ vendor/
 # Secrets
 .env
 
-# Etc
+# IDEs
 .idea
 .DS_Store
-*.mp4
 
 # Binary
 penguintruth
@@ -28,3 +27,6 @@ birdteams
 
 # Creds
 gcloud.json
+
+# Etc.
+*.mp4

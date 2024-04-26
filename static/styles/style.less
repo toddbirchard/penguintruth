@@ -275,15 +275,15 @@ html {
       margin: 45px 0;
 
       h3 {
-        margin: 30px 0 10px;
+        margin: 30px 0 15px;
         color: #525d66;
         font-family: @body-font;
         font-weight: 600;
-        font-size: 1.7em;
+        font-size: 2em;
         line-height: 1;
         @media (max-width: 600px) {
           margin: 30px 0 11px;
-          font-size: 1.2em;
+          font-size: 1.3em;
         }
       }
 
@@ -294,7 +294,7 @@ html {
 
       .list-header {
         border-bottom: 1px solid #eff2f5;
-        padding-bottom: 6px;
+        padding-bottom: 8px;
       }
 
       ul {
@@ -305,6 +305,9 @@ html {
         li {
             font-size: .9em;
             white-space: nowrap;
+            @media (max-width: 600px) {
+              font-size: 1em;
+            }
         }
       }
 
@@ -318,9 +321,6 @@ html {
       margin: 0 0 20px;
       font-size: 1em;
       opacity: .7;
-      @media(max-width: @mobile-breakpoint) {
-        font-size: .9em;
-      }
     }
 
     table {
@@ -386,7 +386,10 @@ html {
           width: 70px;
         }
 
-
+        th {
+          font-weight: 600;
+          font-size: 1.1em;
+        }
       }
 
       i {
@@ -407,7 +410,7 @@ html {
     display: flex;
     align-items: center;
     margin: 0 0 5px;
-    font-size: 1.15em;
+    font-size: 1.2em;
 
     * {
       color: #61707c;
