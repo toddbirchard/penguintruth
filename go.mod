@@ -1,11 +1,14 @@
 module github.com/toddbirchard/penguintruth
 
-go 1.21
+go 1.23
 
 require (
+	github.com/bep/godartsass/v2 v2.1.0
 	github.com/gorilla/mux v1.8.1
 	github.com/joho/godotenv v1.5.1
-	github.com/kib357/less-go v0.0.0-20170821073536-9f0400998d19
 )
 
-require gopkg.in/olebedev/go-duktape.v2 v2.0.0-20170111160100-7da705daddc2 // indirect
+require (
+	github.com/cli/safeexec v1.0.1 // indirect
+	google.golang.org/protobuf v1.30.0 // indirect
+)
