@@ -16,7 +16,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://use.typekit.net/pgr6fet.css" />
-    <link rel="shortcut icon" type="/img/png" href="{{ .Icon }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="{{ .Icon }}" />
     <meta property="og:site_name" content="{{ .Title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ .Title }}" />
@@ -77,6 +80,7 @@
       </section>
       <main>
         <div class="intro">
+          <div class="headline">
           <img class="anti" src="{{ .MainImage }}" alt="anti-penguin" />
           <div>
             <h2>PENGUINS ARE NOT A BIRD TEAM</h2>
@@ -94,13 +98,15 @@
             </div>
           </div>
         </div>
-        <p>
+        <p class="description">
           Eagles. Hawks. Falcons. Raptors. For generations, the world of sports
           has been dominated by an unstoppable alliance of aerial athletes. Even
           in the darkest of times, these fearlessly feathered fowls used the
           miraculous gift of flight to embody the single quality which defines
           America: Freedom.
         </p>
+        </div>
+        
         <section class="page-section">
           <h3>Let's look at the FACTS:</h3>
           <table>
@@ -172,75 +178,74 @@
         <section class="page-section">
           <h3 class="list-header">Official List of Bird Teams</h3>
           <div class="bird-lists">
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-football-ball"></i>
                 <h4>NFL</h4>
               </div>
               <ul>
-                <li>Philadelphia Eagles</li>
-                <li>Atlanta Falcons</li>
-                <li>Arizona Cardinals</li>
-                <li>Baltimore Ravens</li>
-                <li>Seattle Seahawks</li>
+                <li><a href="https://en.wikipedia.org/wiki/Philadelphia_Eagles">Philadelphia Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Atlanta_Falcons">Atlanta Falcons</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Arizona_Cardinals">Arizona Cardinals</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Baltimore_Ravens">Baltimore Ravens</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Seattle_Seahawks">Seattle Seahawks</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-baseball-ball"></i>
                 <h4>MLB</h4>
               </div>
               <ul>
-                <li>Toronto Blue Jays</li>
-                <li>St. Louis Cardinals</li>
-                <li>Baltimore Orioles</li>
+                <li><a href="https://www.mlb.com/bluejays">Toronto Blue Jays</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/St._Louis_Cardinals">St. Louis Cardinals</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Baltimore_Orioles">Baltimore Orioles</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-basketball-ball"></i>
                 <h4>NBA</h4>
               </div>
               <ul>
-                <li>New Orleans Pelicans</li>
-                <li>Atlanta Hawks</li>
-                <li>Toronto Raptors (it's true)</li>
+                <li><a href="https://en.wikipedia.org/wiki/New_Orleans_Pelicans">New Orleans Pelicans</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Atlanta_Hawks">Atlanta Hawks</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Toronto_Raptors">Toronto Raptors (it's true)</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-hockey-puck"></i>
                 <h4>NHL</h4>
               </div>
               <ul>
-                <li>Philadelphia Flyers</li>
-                <li>Detroit Redwings</li>
-                <li>Anaheim Ducks</li>
+                <li><a href="https://www.nhl.com/flyers/">Philadelphia Flyers</a></li>
+                <li><a href="https://www.nhl.com/redwings/">Detroit Redwings</a></li>
+                <li><a href="https://www.nhl.com/ducks/">Anaheim Ducks</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-futbol"></i>
                 <h4>EPL</h4>
               </div>
               <ul>
-                <li>Liverpool LiverBirds</li>
-                <li>Brighten & Hove Seagulls</li>
-                <li>Crystal Palace Eagles</li>
-                <li>Newcastle Magpies</li>
-                <li>Tottenham Hotspur Cocks (jk lol)</li>
+                <li><a href="https://www.liverpoolfc.com/">Liverpool LiverBirds</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Brighton_%26_Hove_Albion_F.C.">Brighton & Hove Albion Seagulls</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Crystal_Palace_F.C.">Crystal Palace Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Newcastle_United_F.C.">Newcastle Magpies</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C.">Tottenham Hotspur Cocks (jk lol)</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fa-solid fa-cricket-bat-ball"></i>
-                <h4>Fake Sports</h4>
+                <h4>Cricket</h4>
               </div>
               <ul>
-                <li>St. Louis BattleHawks</li>
-                <li>Connacht Rugby Eagles</li>
-                <li>Namibia Rugby Fish Eagles</li>
-                <li>Namibia National Cricket Eagles</li>
+                <li><a href="https://en.wikipedia.org/wiki/Namibia_national_cricket_team">Namibia National Cricket Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Sussex_County_Cricket_Club">Sussex County Cricket Club<a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Birmingham_Phoenix">Birmingham Phoenix</a></li>
               </ul>
             </div>
             <div>
@@ -249,56 +254,82 @@
                 <h4>EFL</h4>
               </div>
               <ul>
-                <li>Swansea City Swans</li>
-                <li>Cardiff City Bluebirds</li>
-                <li>West Bromwich Albion Baggies</li>
-                <li>Sheffield Wednesday Owls</li>
-                <li>Oldham Athletic Owls</li>
-                <li>Norwich City Canaries</li>
-                <li>Coventry City Phoenixes</li>
-                <li>Bristol City Robins</li>
-                <li>Swindon Town FC Robins</li>
-                <li>Oldham Athletic</li>
-                <li>Bristol City</li>
+                <li><a href="https://en.wikipedia.org/wiki/Swansea_City_A.F.C.">Swansea City Swans</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Cardiff_City_F.C.">Cardiff City Bluebirds</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/West_Bromwich_Albion_F.C.">West Bromwich Albion Baggies</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Sheffield_Wednesday_F.C.">Sheffield Wednesday Owls</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Oldham_Athletic_A.F.C.">Oldham Athletic Owls</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Norwich_City_F.C.">Norwich City Canaries</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Coventry_City_F.C.">Coventry City Phoenixes</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Bristol_City_F.C.">Bristol City Robins</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Swindon_Town_F.C.">FC Robins</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fa-solid fa-earth-americas"></i>
                 <h4>World Footy</h4>
               </div>
               <ul>
-                <li>Benfica Eagles</li>
-                <li>Eintracht Frankfurt</li>
-                <li>OGC Nice</li>
-                <li>NS.S.C. Bari Cockerels</li>
-                <li>Minnesota United Loons</li>
-                <li>DC United Eagles</li>
-                <li>Inter Miami CF Flamingos</li>
-                <li>Portimonense S.C. Birds (?)</li>
-                <li>Palermo F.C. Birds (?)</li>
-                <li>Al Ahly SC Birds (?)</li>
-                <li>Go Ahead Eagles</li>
+                <li><a href="https://en.wikipedia.org/wiki/S.L._Benfica">Benfica Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Eintracht_Frankfurt">Eintracht Frankfurt</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/OGC_Nice">OGC Nice</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/SSC_Bari">NS.S.C. Bari Cockerels</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Portimonense_S.C.">Portimonense S.C. Birds (?)</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Palermo_FC">Palermo F.C. Birds (?)</a></li>
+                <li><a href ="https://en.wikipedia.org/wiki/Al_Ahly_SC">Al Ahly SC Birds (?)</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Go_Ahead_Eagles">Go Ahead Eagles</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fa-solid fa-baseball-bat-ball"></i>
                 <h4>MiLB</h4>
               </div>
               <ul>
-                <li>Great Lakes Loons</li>
-                <li>Puebla Parakeets</li>
-                <li>Charleston Dirty Birds</li>
-                <li>Delmarva Shorebirds</li>
-                <li>Rochester Red Wings</li>
-                <li>Toledo Mud Hens</li>
-                <li>Akron RubberDucks</li>
-                <li>Memphis Redbirds</li>
-                <li>Oklahoma City RedHawks</li>
+                <li><a href="https://en.wikipedia.org/wiki/Great_Lakes_Loons">Great Lakes Loons</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Pericos_de_Puebla">Puebla Parakeets</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Charleston_Dirty_Birds">Charleston Dirty Birds</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Delmarva_Shorebirds">Delmarva Shorebirds</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Rochester_Red_Wings">Rochester Red Wings</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Toledo_Mud_Hens">Toledo Mud Hens</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Akron_RubberDucks">Akron RubberDucks</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Memphis_Redbirds">Memphis Redbirds</a></li>
+              </ul>
+            </div>
+              <div class="sport-teams">
+                <div class="sport-header">
+                  <i class="fas fa-football-ball"></i>
+                  <h4>United Football League</h4>
+                </div>
+                <ul>
+                  <li><a href="https://en.wikipedia.org/wiki/St._Louis_Battlehawks">St. Louis BattleHawks</a></li>
+                </ul>
+              </div>
+            <div class="sport-teams">
+              <div class="sport-header">
+                <i class="fa-solid fa-rugby-ball"></i>
+                <h4>Rugby</h4>
+              </div>
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Connacht_Rugby">Connacht Rugby Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Namibia_national_rugby_union_team">Namibia Rugby Fish Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/American_Raptors">American Raptors</a></li>
+              </ul>
+            </div>
+            <div class="sport-teams">
+              <div class="sport-header">
+                <i class="fa-solid fa-court-sport"></i>
+                <h4>MLS</h4>
+              </div>
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/D.C._United">DC United Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Inter_Miami_CF">Inter Miami CF Flamingos</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Minnesota_United_FC">Minnesota United Loons</a></li>
               </ul>
             </div>
           </div>
+        
         </section>
         <section class="page-section">
           <h3>Take Action NOW</h3>
@@ -328,9 +359,7 @@
                     />
                   </a>
                   <div class="authors">
-                    <span class="kg-bookmark-author"
-                      >Broiest Bro started this petition to NHL</span
-                    >
+                    <span class="kg-bookmark-author">Broiest Bro started this petition to NHL</span>
                     <span class="kg-bookmark-publisher">Change.org</span>
                   </div>
                 </div>
@@ -355,6 +384,7 @@
             PENGUINS ARE NOT BIRDS
           </p>
         </section>
+      </div>
       </main>
     </div>
   </body>
