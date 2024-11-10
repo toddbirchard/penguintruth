@@ -1,4 +1,4 @@
-@import "vars.less";
+@import 'vars.less';
 
 
 body,
@@ -24,6 +24,9 @@ html {
     width: -webkit-fill-available;
     @media (max-width: 800px) {
       padding: 20px;
+    }
+    @media (max-width: @mobile-breakpoint) {
+      padding: 20px 10px;
     }
 
     .header-wrapper {
@@ -56,21 +59,22 @@ html {
           color: @title-color;
           line-height: 1;
           font-size: 2.24em;
-          @media (max-width: 800px) {
-            font-size: 2em;
+          margin-bottom: 2px;
+          @media (max-width: @mobile-breakpoint) {
+            font-size: 1.8em;
+            width: 35px;
+            margin-right: 7px;
           }
-          @media (max-width: 600px) {
-            font-size: 1.4em;
+          @media (max-width: @small-breakpoint) {
+            font-size: 1.35em;
+            width: 30px;
           }
         }
 
         .organization {
           line-height: 1;
-          font-weight: 600;
+          font-weight: 500;
           color: @title-color;
-          @media (max-width: 800px) {
-            font-size: .9em;
-          }
           @media (max-width: 600px) {
             font-size: .8em;
             display: none;
@@ -80,9 +84,14 @@ html {
         img {
           width: 50px;
           margin-right: 15px;
-          @media (max-width: 600px) {
-            width: 24px;
-            margin-right: 10px;
+          @media (max-width: @mobile-breakpoint) {
+            width: 35px;
+            margin-right: 8px;
+          }
+
+          @media (max-width: @small-breakpoint) {
+            width: 25px;
+            margin-right: 5px;
           }
         }
       }
@@ -103,9 +112,17 @@ html {
           line-height: 1;
           text-transform: uppercase;
           font-weight: 500;
-          @media (max-width: 600px) {
-            font-size: 1em;
-            padding: 6px 10px;
+          @media (max-width: @tablet-breakpoint) {
+            font-size: 1.15em;
+            padding: 6px 12px;
+          }
+          @media (max-width: @mobile-breakpoint) {
+            font-size: .9em;
+            padding: 6px;
+            line-height: 1;
+          }
+          @media (max-width: @small-breakpoint) {
+            font-size: .85em;
           }
 
           &:hover {
@@ -132,16 +149,16 @@ html {
       padding: 20px;
     }
 
-    .intro {
+    .intro .headline {
       display: flex;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       align-items: center;
       padding-bottom: 20px;
-      border-bottom: 1px solid #ececec;
+      border-bottom: 1px solid #e2e2e2;
       @media (max-width: @mobile-breakpoint) {
         display: block;
         font-size: .9em;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         padding-bottom: 15px;
       }
 
@@ -171,17 +188,13 @@ html {
           margin-bottom: 8px;
           font-size: 5.3vw;
         }
-        @media (max-width: 500px) {
-          font-size: 5.6vw;
-        }
       }
 
       .subtitle {
         margin: 0 0 2px;
         color: @title-color;
-        font-weight: 500;
         font-size: 1.22em;
-        line-height: 1.1;
+        line-height: 1.2;
         text-align: justify !important;
         display: inline;
         @media (max-width: @tablet-breakpoint) {
@@ -190,11 +203,11 @@ html {
         @media (max-width: @mobile-breakpoint) {
           display: flex;
           text-align: center;
-          font-weight: 500;
           line-height: 1;
           margin-bottom: 5px;
           align-items: center;
           white-space: nowrap;
+          font-weight: 600;
           &:first-of-type {
             font-size: 3vw;
             letter-spacing: .14vw;
@@ -247,6 +260,8 @@ html {
         }
 
         span {
+          font-size: 1.1em;
+          font-weight: 500;
           @media (max-width: @mobile-breakpoint) {
             text-align: justify;
             width: 100%;
@@ -256,6 +271,7 @@ html {
             text-align: justify;
             width: unset;
             display: inline-block;
+            font-size: 1em;
           }
         }
       }
@@ -269,17 +285,17 @@ html {
         margin: 30px 0 15px;
         color: #525d66;
         font-family: @body-font;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 2em;
         line-height: 1;
         @media (max-width: 600px) {
           margin: 30px 0 11px;
-          font-size: 1.3em;
+          font-size: 1.5em;
         }
       }
 
       h4 {
-        color: #525d65;
+        color: @light-grey;
         white-space: nowrap;
       }
 
@@ -292,11 +308,12 @@ html {
       ul {
         margin: 6px 0;
         padding: 0 0 0 15px;
-        color: #525d65;
+        color: @light-grey;
 
         li {
-            font-size: .9em;
-            white-space: nowrap;
+          font-size: .95em;
+          line-height: 1.25;
+          white-space: nowrap;
             @media (max-width: 600px) {
               font-size: 1em;
             }
@@ -311,8 +328,12 @@ html {
     p {
       line-height: 1.4em;
       margin: 0 0 20px;
-      font-size: 1em;
+      font-size: 1.1em;
       opacity: .7;
+
+      @media(max-width: @mobile-breakpoint) {
+        font-size: .95em;
+      }
     }
 
     table {
@@ -322,6 +343,11 @@ html {
       border-spacing: 0;
       border-right: 1px solid rgba(222, 223, 224, .8);
       border-bottom: 1px solid rgba(222, 223, 224, .8);
+      @media(max-width: @small-breakpoint) {
+        width: 100vw;
+        position: relative;
+        left: -4vw;
+      }
 
       th {
         padding: 6px 10px;
@@ -332,7 +358,7 @@ html {
         border-right: 0;
         line-height: 1.7;
         @media (max-width: @mobile-breakpoint) {
-          font-size: .8em;
+          font-size: .95em;
         }
 
         &:last-of-type {
@@ -349,14 +375,13 @@ html {
       td {
         padding: 6px 10px;
         text-align: center;
-        border: 1px solid rgba(222, 223, 224, .5);
+        border: 1px solid rgba(222, 223, 224, .8);
         border-bottom: 0;
         border-right: 0;
         font-family: @table-font;
-        font-size: .9em;
         line-height: 1.7;
-        @media (max-width: @mobile-breakpoint) {
-          font-size: .8em;
+        @media(max-width: @mobile-breakpoint) {
+          font-size: .95em;
         }
 
         &:first-of-type {
@@ -364,8 +389,15 @@ html {
           max-width: 20%;
         }
 
-        span {
+        .bird-criteria-text {
           opacity: .6;
+          font-family: @body-font;
+          white-space: nowrap;
+          font-weight: 500;
+          text-overflow: ellipsis;
+          display: block;
+          overflow: hidden;
+          font-size: .9em;
         }
       }
 
@@ -426,13 +458,13 @@ html {
     @media (max-width: @tablet-breakpoint) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (max-width: @mobile-breakpoint) {
+    @media (max-width: @small-breakpoint) {
       grid-template-columns: 1fr;
     }
 
     & > div {
       min-width: 30%;
-      margin: 0 0 15px;
+      margin: 0 0 5px;
       @media (max-width: 700px) {
         min-width: 49%;
       }
@@ -445,6 +477,23 @@ html {
     li {
       margin-bottom: 5px;
       font-size: .9em;
+
+      a {
+        color: #6d6e73;
+        text-decoration: underline;
+        text-decoration-color: #9ca4aa;
+        transition: all .2s ease-out;
+
+        &:hover {
+          color: #e06d72;
+          text-decoration-color: #e06d72;
+          cursor: pointer;
+        }
+
+        &.visited {
+          color: #6d6e73;
+        }
+      }
     }
   }
 
@@ -458,6 +507,9 @@ html {
     overflow: hidden;
     @media (max-width: @mobile-breakpoint) {
       flex-direction: column-reverse;
+    }
+    @media (max-width: @small-breakpoint) {
+      padding: 14px;
     }
 
     &:hover {
@@ -518,6 +570,7 @@ html {
 
       .kg-bookmark-title {
         -webkit-line-clamp: 2;
+        line-clamp: 2;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         width: stretch;
@@ -530,7 +583,8 @@ html {
         text-decoration: none;
         color: @title-color;
         @media (max-width: @mobile-breakpoint) {
-          font-size: 1em;
+          font-size: 1.2em;
+          margin-bottom: 3px;
         }
 
         i {
@@ -541,6 +595,7 @@ html {
 
       .kg-bookmark-description {
         -webkit-line-clamp: 2;
+        line-clamp: 2;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         width: stretch;
@@ -557,11 +612,13 @@ html {
           margin: 10px 0 20px;
         }
         @media (max-width: @mobile-breakpoint) {
-          margin: 10px 0;
+          margin: 10px 0 !important;
+          
         }
         @media (max-width: 500px) {
-          margin: 5px 0 10px !important;
-          font-size: .85em !important;
+          font-size: .95em !important;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
         }
       }
 

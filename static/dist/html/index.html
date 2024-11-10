@@ -16,7 +16,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://use.typekit.net/pgr6fet.css" />
-    <link rel="shortcut icon" type="/img/png" href="{{ .Icon }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="{{ .Icon }}" />
     <meta property="og:site_name" content="{{ .Title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ .Title }}" />
@@ -54,7 +57,7 @@
           </a>
           <nav>
             <a href="https://www.change.org/penguintruth" class="nav-link">
-              Petition
+              Sign Petition
             </a>
           </nav>
         </div>
@@ -77,6 +80,7 @@
       </section>
       <main>
         <div class="intro">
+          <div class="headline">
           <img class="anti" src="{{ .MainImage }}" alt="anti-penguin" />
           <div>
             <h2>PENGUINS ARE NOT A BIRD TEAM</h2>
@@ -94,13 +98,13 @@
             </div>
           </div>
         </div>
-        <p>
+        <p class="description">
           Eagles. Hawks. Falcons. Raptors. For generations, the world of sports
           has been dominated by an unstoppable alliance of aerial athletes. Even
           in the darkest of times, these fearlessly feathered fowls used the
           miraculous gift of flight to embody the single quality which defines
           America: Freedom.
-        </p>
+        </p>        
         <section class="page-section">
           <h3>Let's look at the FACTS:</h3>
           <table>
@@ -113,7 +117,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><span>Can fly</span></td>
+                <td><span class="bird-criteria-text">Can fly</span></td>
                 <td class="bird-column">
                   <i class="fa-sharp fa-solid fa-square-check"></i>
                 </td>
@@ -122,7 +126,7 @@
                 </td>
               </tr>
               <tr>
-                <td><span>Have REAL feathers</span></td>
+                <td><span class="bird-criteria-text">Have REAL feathers</span></td>
                 <td class="bird-column">
                   <i class="fa-sharp fa-solid fa-square-check"></i>
                 </td>
@@ -131,7 +135,7 @@
                 </td>
               </tr>
               <tr>
-                <td><span>Superbowl champions</span></td>
+                <td><span class="bird-criteria-text">Superbowl champions</span></td>
                 <td class="bird-column">
                   <i class="fa-sharp fa-solid fa-square-check"></i>
                 </td>
@@ -140,7 +144,7 @@
                 </td>
               </tr>
               <tr>
-                <td><span>Jungle Juice Cup Champions</span></td>
+                <td><span class="bird-criteria-text">Jungle Juice Cup Champions</span></td>
                 <td class="bird-column">
                   <i class="fa-sharp fa-solid fa-square-check"></i>
                 </td>
@@ -149,7 +153,7 @@
                 </td>
               </tr>
               <tr>
-                <td><span>CAWWWWWWWWWWW</span></td>
+                <td><span class="bird-criteria-text">CAWWWWWWWWWWW</span></td>
                 <td class="bird-column">
                   <i class="fa-sharp fa-solid fa-square-check"></i>
                 </td>
@@ -158,7 +162,7 @@
                 </td>
               </tr>
               <tr>
-                <td><span>Top O' Da League</span></td>
+                <td><span class="bird-criteria-text">Top O' Da League</span></td>
                 <td class="bird-column">
                   <i class="fa-sharp fa-solid fa-square-check"></i>
                 </td>
@@ -179,7 +183,7 @@
               </div>
               <ul>
                 <li><a href="https://en.wikipedia.org/wiki/Philadelphia_Eagles">Philadelphia Eagles</a></li>
-                <li><a href-"https://en.wikipedia.org/wiki/Atlanta_Falcons">Atlanta Falcons</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Atlanta_Falcons">Atlanta Falcons</a></li>
                 <li><a href="https://en.wikipedia.org/wiki/Arizona_Cardinals">Arizona Cardinals</a></li>
                 <li><a href="https://en.wikipedia.org/wiki/Baltimore_Ravens">Baltimore Ravens</a></li>
                 <li><a href="https://en.wikipedia.org/wiki/Seattle_Seahawks">Seattle Seahawks</a></li>
@@ -259,7 +263,7 @@
                 <li><a href="https://en.wikipedia.org/wiki/Swindon_Town_F.C.">FC Robins</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fa-solid fa-earth-americas"></i>
                 <h4>World Footy</h4>
@@ -275,7 +279,7 @@
                 <li><a href="https://en.wikipedia.org/wiki/Go_Ahead_Eagles">Go Ahead Eagles</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fa-solid fa-baseball-bat-ball"></i>
                 <h4>MiLB</h4>
@@ -291,7 +295,51 @@
                 <li><a href="https://en.wikipedia.org/wiki/Memphis_Redbirds">Memphis Redbirds</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
+              <div class="sport-header">
+                <i class="fa-solid fa-rugby-ball"></i>
+                <h4>Rugby</h4>
+              </div>
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Connacht_Rugby">Connacht Rugby Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Namibia_national_rugby_union_team">Namibia Rugby Fish Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/American_Raptors">American Raptors</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Adelaide_Football_Club#AFL_Women's_team">Adelaide Crows</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Collingwood_Football_Club#AFL_Women's_team"></a>Collingwood Magpies</li>
+                <li><a href="https://en.wikipedia.org/wiki/Hawthorn_Football_Club_(AFL_Women%27s)">Hawthorn Hawks</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Sydney_Swans#Women's_team">Sydney Swans</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/West_Coast_Eagles_(AFL_Women%27s)">West Coast Eagles</a></li>
+              </ul>
+            </div>
+            <div class="sport-teams">
+              <div class="sport-header">
+                <i class="fa-solid fa-court-sport"></i>
+                <h4>MLS</h4>
+              </div>
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/D.C._United">DC United Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Inter_Miami_CF">Inter Miami CF Flamingos</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Minnesota_United_FC">Minnesota United Loons</a></li>
+              </ul>
+            </div>
+            <div class="sport-teams">
+              <div class="sport-header">
+                <i class="fa-solid fa-football-helmet"></i>
+                <h4>NCAA Handegg</h4>
+              </div>
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Air_Force_Falcons">United States Air Force Falcons</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Kansas_Jayhawks">Kansas Jayhawks</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Florida_Gulf_Coast_Eagles">Florida Gulf Coast Eagles</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Stevens_Institute_of_Technology">Stevens Institute of Technology Ducks</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Johns_Hopkins_Blue_Jays">Johns Hopkins Blue Jays</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Bryn_Mawr_College">Bryn Mawr Predator Owls</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/North_Florida_Ospreys">North Florida Ospreys</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Temple_Owls">Temple Owls</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Marquette_Golden_Eagles">Marquette Golden Eagles</a></li>
+              </ul>
+            </div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-football-ball"></i>
                 <h4>United Football League</h4>
@@ -300,28 +348,6 @@
                 <li><a href="https://en.wikipedia.org/wiki/St._Louis_Battlehawks">St. Louis BattleHawks</a></li>
               </ul>
             </div>
-          </div>
-          <div class="sport-teams">
-            <div class="sport-header">
-              <i class="fa-solid fa-rugby-ball"></i>
-              <h4>Rugby</h4>
-            </div>
-            <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Connacht_Rugby">Connacht Rugby Eagles></a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Namibia_national_rugby_union_team">Namibia Rugby Fish Eagles</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/American_Raptors">American Raptors</a></li>
-            </ul>
-          </div>
-          <div class="sport-teams">
-            <div class="sport-header">
-              <i class="fa-solid fa-court-sport"></i>
-              <h4>MLS</h4>
-            </div>
-            <ul>
-              <li><a href="https://en.wikipedia.org/wiki/D.C._United">DC United Eagles</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Inter_Miami_CF">Inter Miami CF Flamingos</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Minnesota_United_FC">Minnesota United Loons</a></li>
-            </ul>
           </div>
         </section>
         <section class="page-section">
@@ -352,9 +378,7 @@
                     />
                   </a>
                   <div class="authors">
-                    <span class="kg-bookmark-author"
-                      >Broiest Bro started this petition to NHL</span
-                    >
+                    <span class="kg-bookmark-author">Broiest Bro started this petition to NHL</span>
                     <span class="kg-bookmark-publisher">Change.org</span>
                   </div>
                 </div>
@@ -379,6 +403,7 @@
             PENGUINS ARE NOT BIRDS
           </p>
         </section>
+      </div>
       </main>
     </div>
   </body>
