@@ -66,7 +66,7 @@ html {
             margin-right: 7px;
           }
           @media (max-width: @small-breakpoint) {
-            font-size: 1.4em;
+            font-size: 1.35em;
             width: 30px;
           }
         }
@@ -84,9 +84,14 @@ html {
         img {
           width: 50px;
           margin-right: 15px;
-          @media (max-width: 600px) {
+          @media (max-width: @mobile-breakpoint) {
             width: 35px;
             margin-right: 8px;
+          }
+
+          @media (max-width: @small-breakpoint) {
+            width: 25px;
+            margin-right: 5px;
           }
         }
       }
@@ -107,10 +112,17 @@ html {
           line-height: 1;
           text-transform: uppercase;
           font-weight: 500;
-          @media (max-width: 600px) {
+          @media (max-width: @tablet-breakpoint) {
+            font-size: 1.15em;
+            padding: 6px 12px;
+          }
+          @media (max-width: @mobile-breakpoint) {
             font-size: .9em;
             padding: 6px;
             line-height: 1;
+          }
+          @media (max-width: @small-breakpoint) {
+            font-size: .85em;
           }
 
           &:hover {
@@ -142,7 +154,7 @@ html {
       margin-bottom: 20px;
       align-items: center;
       padding-bottom: 20px;
-      border-bottom: 1px solid #ececec;
+      border-bottom: 1px solid #e2e2e2;
       @media (max-width: @mobile-breakpoint) {
         display: block;
         font-size: .9em;
@@ -274,7 +286,7 @@ html {
         color: #525d66;
         font-family: @body-font;
         font-weight: 500;
-        font-size: 2em;
+        font-size: 1.8em;
         line-height: 1;
         @media (max-width: 600px) {
           margin: 30px 0 11px;
@@ -283,7 +295,7 @@ html {
       }
 
       h4 {
-        color: #525d65;
+        color: @light-grey;
         white-space: nowrap;
       }
 
@@ -296,7 +308,7 @@ html {
       ul {
         margin: 6px 0;
         padding: 0 0 0 15px;
-        color: #525d65;
+        color: @light-grey;
 
         li {
           font-size: .95em;
@@ -334,7 +346,7 @@ html {
       @media(max-width: @small-breakpoint) {
         width: 100vw;
         position: relative;
-        left: -5vw;
+        left: -4vw;
       }
 
       th {
@@ -377,8 +389,15 @@ html {
           max-width: 20%;
         }
 
-        span {
+        .bird-criteria-text {
           opacity: .6;
+          font-family: @body-font;
+          white-space: nowrap;
+          font-weight: 500;
+          text-overflow: ellipsis;
+          display: block;
+          overflow: hidden;
+          font-size: .9em;
         }
       }
 
@@ -445,7 +464,7 @@ html {
 
     & > div {
       min-width: 30%;
-      margin: 0 0 5px;
+      margin: 0 0 10px;
       @media (max-width: 700px) {
         min-width: 49%;
       }
@@ -488,6 +507,9 @@ html {
     overflow: hidden;
     @media (max-width: @mobile-breakpoint) {
       flex-direction: column-reverse;
+    }
+    @media (max-width: @small-breakpoint) {
+      padding: 14px;
     }
 
     &:hover {
@@ -548,6 +570,7 @@ html {
 
       .kg-bookmark-title {
         -webkit-line-clamp: 2;
+        line-clamp: 2;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         width: stretch;
@@ -560,7 +583,8 @@ html {
         text-decoration: none;
         color: @title-color;
         @media (max-width: @mobile-breakpoint) {
-          font-size: 1em;
+          font-size: 1.2em;
+          margin-bottom: 3px;
         }
 
         i {
@@ -571,6 +595,7 @@ html {
 
       .kg-bookmark-description {
         -webkit-line-clamp: 2;
+        line-clamp: 2;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         width: stretch;
@@ -587,11 +612,13 @@ html {
           margin: 10px 0 20px;
         }
         @media (max-width: @mobile-breakpoint) {
-          margin: 10px 0;
+          margin: 10px 0 !important;
+          
         }
         @media (max-width: 500px) {
-          margin: 5px 0 10px !important;
-          font-size: .85em !important;
+          font-size: .95em !important;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
         }
       }
 
@@ -651,5 +678,3 @@ html {
     }
   }
 }
-
-

@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/gorilla/mux"
-	"github.com/joho/godotenv"
-	"github.com/toddbirchard/penguintruth/home"
 	"log"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/gorilla/mux"
+	"github.com/joho/godotenv"
+	"github.com/toddbirchard/penguintruth/home"
 )
 
 // Construct Host IP Address

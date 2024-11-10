@@ -17,7 +17,7 @@ type MetaData struct {
 
 // IndexHandler Render homepage template
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl := template.Must(template.ParseFiles("templates/index.html"))
+	tmpl := template.Must(template.ParseFiles("static/dist/html/index.html"))
 	data := MetaData{
 		Title:      "Penguin Truth",
 		TagLine:    "Exposing the facts about penguins and their flightless origins.",
