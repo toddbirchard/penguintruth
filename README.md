@@ -1,6 +1,6 @@
 # Penguin Truth
 
-![Go](https://img.shields.io/badge/Go-1.24-blue.svg?logo=go&longCache=true&logoColor=white&colorB=88C0D0&style=flat-square&colorA=4c566a)
+![Go](https://img.shields.io/badge/Go-1.25-blue.svg?logo=go&longCache=true&logoColor=white&colorB=88C0D0&style=flat-square&colorA=4c566a)
 ![Mux](https://img.shields.io/badge/Mux-1.8.0-blue.svg?logo=go&longCache=true&logoColor=white&colorB=88C0D0&style=flat-square&colorA=4c566a)
 ![Less Go](https://img.shields.io/badge/Less--go-0.0.0-blue.svg?logo=go&longCache=true&logoColor=white&colorB=88C0D0&style=flat-square&colorA=4c566a)
 ![Goquery](https://img.shields.io/badge/GoDotenv-1.4.0-blue.svg?logo=go&longCache=true&logoColor=white&colorB=88C0D0&style=flat-square&colorA=4c566a)
