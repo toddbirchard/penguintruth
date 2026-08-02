@@ -2,9 +2,9 @@ package home
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/kib357/less-go"
+	log "github.com/sirupsen/logrus"
 )
 
 // CompileStylesheets Compile and minify .LESS files
