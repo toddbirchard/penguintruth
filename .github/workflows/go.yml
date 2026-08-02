@@ -22,7 +22,7 @@ jobs:
         run: |
           go get -v -t -d ./...
             if [ -f Gopkg.toml ]; then
-              url https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+              curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
               dep ensure
             fi
 
