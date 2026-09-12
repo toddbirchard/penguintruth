@@ -85,7 +85,7 @@ func main() {
 	// Load environment variables from `.env` file.
 	envErr := godotenv.Load()
 
-	// Initialize logger and set log level based on environment.
+	// Initialize logger.
 	initLogger(logFilePath)
 
 	// Warn if .env file is missing, but continue using process environment variables.

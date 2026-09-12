@@ -275,9 +275,19 @@ func TestCompileStylesheetsProducesCSS(t *testing.T) {
 	if err := os.WriteFile(compiled, []byte("/* overwritten by test */"), 0o644); err != nil {
 		t.Fatalf("clearing %s: %v", compiled, err)
 	}
+	// less-go logs failures via log.Fatal, which would os.Exit the entire test
+	// process; override ExitFunc so failures surface as a test failure instead.
+	logger := log.StandardLogger()
+	origExit := logger.ExitFunc
+	logger.ExitFunc = func(code int) { panic(code) }
+	t.Cleanup(func() { logger.ExitFunc = origExit })
 
+	defer func() {
+		if r := recover(); r != nil {
+			t.Fatalf("CompileStylesheets exited via log.Fatal (exit=%v)", r)
+		}
+	}()
 	home.CompileStylesheets()
-
 	got, err := os.ReadFile(compiled)
 	if err != nil {
 		t.Fatalf("reading %s after compiling: %v", compiled, err)
