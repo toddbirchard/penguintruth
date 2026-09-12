@@ -89,6 +89,115 @@ func TestRouterServesHomepage(t *testing.T) {
 	}
 }
 
+// captureProductionLogs points logrus at a buffer using the same formatter
+// production runs with, so assertions see the field names Datadog will ingest.
+func captureProductionLogs(t *testing.T) *bytes.Buffer {
+	t.Helper()
+	restoreLogger(t)
+
+	var logs bytes.Buffer
+	log.SetOutput(&logs)
+	log.SetFormatter(&log.JSONFormatter{
+		FieldMap:        datadogFieldMap,
+		TimestampFormat: time.RFC3339Nano,
+	})
+	log.SetLevel(log.InfoLevel)
+	return &logs
+}
+
+func TestHomepageRequestEmitsInfoLog(t *testing.T) {
+	logs := captureProductionLogs(t)
+
+	request := httptest.NewRequest(http.MethodGet, "/", nil)
+	request.Header.Set("X-Forwarded-For", "203.0.113.7, 198.51.100.4")
+	request.Header.Set("User-Agent", "PenguinTruthTest/1.0")
+	request.Header.Set("Referer", "https://example.com/roost")
+
+	recorder := httptest.NewRecorder()
+	Router().ServeHTTP(recorder, request)
+
+	if recorder.Code != http.StatusOK {
+		t.Fatalf("GET / = %d, want %d", recorder.Code, http.StatusOK)
+	}
+
+	var entry map[string]any
+	if err := json.Unmarshal(logs.Bytes(), &entry); err != nil {
+		t.Fatalf("log line is not valid JSON: %v (got %q)", err, logs.String())
+	}
+
+	for key, want := range map[string]any{
+		"message":               "Homepage rendered.",
+		"status":                "info",
+		"http.method":           http.MethodGet,
+		"http.url_details.path": "/",
+		"http.status_code":      float64(http.StatusOK),
+		"http.useragent":        "PenguinTruthTest/1.0",
+		"http.referer":          "https://example.com/roost",
+		// Only the left-most forwarded entry is the visitor.
+		"network.client.ip": "203.0.113.7",
+	} {
+		if got := entry[key]; got != want {
+			t.Errorf("entry[%q] = %v, want %v", key, got, want)
+		}
+	}
+
+	if _, ok := entry["duration"].(float64); !ok {
+		t.Errorf(`entry["duration"] = %v, want a number of nanoseconds`, entry["duration"])
+	}
+}
+
+// The webserver only listens on loopback, so an unproxied RemoteAddr would
+// record every visitor as 127.0.0.1.
+func TestHomepageLogPrefersForwardedClientIP(t *testing.T) {
+	for name, tc := range map[string]struct {
+		headers map[string]string
+		want    string
+	}{
+		"forwarded chain": {map[string]string{"X-Forwarded-For": "203.0.113.7, 198.51.100.4"}, "203.0.113.7"},
+		"padded entry":    {map[string]string{"X-Forwarded-For": "  203.0.113.7  "}, "203.0.113.7"},
+		"real ip":         {map[string]string{"X-Real-IP": "203.0.113.9"}, "203.0.113.9"},
+		"forwarded wins":  {map[string]string{"X-Forwarded-For": "203.0.113.7", "X-Real-IP": "203.0.113.9"}, "203.0.113.7"},
+		// httptest gives synthetic requests a RemoteAddr of 192.0.2.1:1234.
+		"unproxied":    {nil, "192.0.2.1"},
+		"empty header": {map[string]string{"X-Forwarded-For": "   "}, "192.0.2.1"},
+	} {
+		t.Run(name, func(t *testing.T) {
+			logs := captureProductionLogs(t)
+
+			request := httptest.NewRequest(http.MethodGet, "/", nil)
+			for header, value := range tc.headers {
+				request.Header.Set(header, value)
+			}
+			Router().ServeHTTP(httptest.NewRecorder(), request)
+
+			var entry map[string]any
+			if err := json.Unmarshal(logs.Bytes(), &entry); err != nil {
+				t.Fatalf("log line is not valid JSON: %v (got %q)", err, logs.String())
+			}
+			if got := entry["network.client.ip"]; got != tc.want {
+				t.Errorf("network.client.ip = %v, want %v", got, tc.want)
+			}
+		})
+	}
+}
+
+// Static assets are served straight off disk; logging each one would bury the
+// pageview lines the homepage log exists to produce.
+func TestStaticAssetRequestsAreNotLogged(t *testing.T) {
+	logs := captureProductionLogs(t)
+
+	request := httptest.NewRequest(http.MethodGet, "/static/dist/css/style.css", nil)
+	recorder := httptest.NewRecorder()
+	Router().ServeHTTP(recorder, request)
+
+	if recorder.Code != http.StatusOK {
+		t.Fatalf("GET /static/dist/css/style.css = %d, want %d", recorder.Code, http.StatusOK)
+	}
+	if logs.Len() != 0 {
+		t.Errorf("static asset request logged %q", logs.String())
+	}
+}
+
 func TestRouterServesStaticAssets(t *testing.T) {
 	for _, path := range []string{
 		"/static/dist/css/style.css",
