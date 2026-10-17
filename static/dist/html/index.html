@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="img/png" href="{{ .Icon }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ .Icon }}" />
     <meta property="og:site_name" content="{{ .Title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ .Title }}" />
@@ -64,7 +64,7 @@
           class="videoObject center"
           autoplay
           loop
-          autobuffer
+          preload="auto"
           muted
           playsinline
           id="myVideo"
@@ -186,7 +186,7 @@
             <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-football-ball"></i>
-                <h4>NFL</h4>
+                <h4>NFL &amp; CFL</h4>
               </div>
               <ul>
                 <li><a href="https://www.philadelphiaeagles.com/">Philadelphia Eagles</a></li>
@@ -194,6 +194,7 @@
                 <li><a href="https://www.azcardinals.com/">Arizona Cardinals</a></li>
                 <li><a href="https://www.baltimoreravens.com/">Baltimore Ravens</a></li>
                 <li><a href="https://www.seahawks.com/">Seattle Seahawks</a></li>
+                <li><a href="https://montrealalouettes.com/">Montreal Alouettes</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -210,26 +211,31 @@
             <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-basketball-ball"></i>
-                <h4>NBA</h4>
+                <h4>NBA &amp; G League</h4>
               </div>
               <ul>
                 <li><a href="https://www.nba.com/pelicans">New Orleans Pelicans</a></li>
                 <li><a href="https://www.nba.com/hawks">Atlanta Hawks</a></li>
                 <li><a href="https://www.nba.com/raptors">Toronto Raptors (it's true)</a></li>
+                <li><a href="https://cpskyhawks.gleague.nba.com/">College Park Skyhawks</a></li>
+                <li><a href="https://raptors905.gleague.nba.com/">Raptors 905</a></li>
               </ul>
             </div>
             <div class="sport-teams">
               <div class="sport-header">
                 <i class="fas fa-hockey-puck"></i>
-                <h4>NHL & AHL</h4>
+                <h4>NHL &amp; AHL</h4>
               </div>
               <ul>
                 <li><a href="https://www.nhl.com/flyers/">Philadelphia Flyers</a></li>
-                <li><a href="https://www.nhl.com/redwings/">Detroit Redwings</a></li>
+                <li><a href="https://www.nhl.com/redwings/">Detroit Red Wings</a></li>
                 <li><a href="https://www.nhl.com/ducks/">Anaheim Ducks</a></li>
                 <li><a href="https://springfieldthunderbirds.com/">Springfield Thunderbirds</a></li>
                 <li><a href="https://www.bakersfieldcondors.com/">Bakersfield Condors</a></li>
                 <li><a href="https://cvfirebirds.com/">Coachella Valley Firebirds</a></li>
+                <li><a href="https://www.sandiegogulls.com/">San Diego Gulls</a></li>
+                <li><a href="https://www.coloradoeagles.com/">Colorado Eagles</a></li>
+                <li><a href="https://www.tucsonroadrunners.com/">Tucson Roadrunners</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -239,10 +245,11 @@
               </div>
               <ul>
                 <li><a href="https://www.liverpoolfc.com/">Liverpool LiverBirds</a></li>
-                <li><a href="https://www.brightonandhovealbion.com/">Brighton & Hove Albion Seagulls</a></li>
+                <li><a href="https://www.brightonandhovealbion.com/">Brighton &amp; Hove Albion Seagulls</a></li>
                 <li><a href="https://www.cpfc.co.uk/">Crystal Palace Eagles</a></li>
                 <li><a href="https://www.newcastleunited.com/">Newcastle Magpies</a></li>
                 <li><a href="https://www.tottenhamhotspur.com/">Tottenham Hotspur Cocks (jk lol)</a></li>
+                <li><a href="https://www.ccfc.co.uk/">Coventry City Phoenixes</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -252,16 +259,19 @@
               </div>
               <ul>
                 <li><a href="https://cricketnamibia.com/">Namibia National Cricket Eagles</a></li>
-                <li><a href="https://sussexcricket.co.uk/">Sussex County Cricket Club</a></li>
+                <li><a href="https://sussexcricket.co.uk/">Sussex Martlets</a></li>
                 <li><a href="https://www.thehundred.com/teams/birmingham-phoenix">Birmingham Phoenix</a></li>
                 <li><a href="https://www.sunrisershyderabad.in/">Sunrisers Hyderabad</a></li>
                 <li><a href="https://essexcricket.org.uk/">Essex Eagles</a></li>
                 <li><a href="https://derbyshireccc.com/">Derbyshire Falcons</a></li>
-                <li><a href="https://www.ageasbowl.com/">Hampshire Hawks</a></li>
-                <li><a href="https://antiguabarbudafalcons.com/">Antigua & Barbuda Falcons</a></li>
+                <li><a href="https://www.hampshirecricket.com/">Hampshire Hawks</a></li>
+                <li><a href="https://antiguabarbudafalcons.com/">Antigua &amp; Barbuda Falcons</a></li>
+                <li><a href="https://ugandacricket.com/">Uganda Cricket Cranes</a></li>
+                <li><a href="https://www.cricketwellington.co.nz/">Wellington Firebirds</a></li>
+                <li><a href="https://www.sunriserseasterncape.co.za/">Sunrisers Eastern Cape</a></li>
               </ul>
             </div>
-            <div>
+            <div class="sport-teams">
               <div class="sport-header">
                 <i class="fa-solid fa-goal-net"></i>
                 <h4>EFL</h4>
@@ -269,13 +279,16 @@
               <ul>
                 <li><a href="https://www.swanseacity.com/">Swansea City Swans</a></li>
                 <li><a href="https://www.cardiffcityfc.co.uk/">Cardiff City Bluebirds</a></li>
-                <li><a href="https://www.wba.co.uk/">West Bromwich Albion Baggies</a></li>
+                <li><a href="https://www.wba.co.uk/">West Bromwich Albion Throstles</a></li>
                 <li><a href="https://www.swfc.co.uk/">Sheffield Wednesday Owls</a></li>
                 <li><a href="https://www.oldhamathletic.co.uk/">Oldham Athletic Owls</a></li>
                 <li><a href="https://www.canaries.co.uk/">Norwich City Canaries</a></li>
-                <li><a href="https://www.ccfc.co.uk/">Coventry City Phoenixes</a></li>
                 <li><a href="https://www.bcfc.co.uk/">Bristol City Robins</a></li>
-                <li><a href="https://www.swindontownfc.co.uk/">FC Robins</a></li>
+                <li><a href="https://www.swindontownfc.co.uk/">Swindon Town Robins</a></li>
+                <li><a href="https://www.nottscountyfc.co.uk/">Notts County Magpies</a></li>
+                <li><a href="https://www.bradfordcityafc.com/">Bradford City Bantams</a></li>
+                <li><a href="https://www.bromleyfc.co.uk/">Bromley Ravens</a></li>
+                <li><a href="https://www.ctfc.com/">Cheltenham Town Robins</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -285,14 +298,17 @@
               </div>
               <ul>
                 <li><a href="https://www.slbenfica.pt/">Benfica Eagles</a></li>
-                <li><a href="https://www.eintracht.de/">Eintracht Frankfurt</a></li>
-                <li><a href="https://www.ogcnice.com/">OGC Nice</a></li>
-                <li><a href="https://www.sscalciobari.it/">NS.S.C. Bari Cockerels</a></li>
+                <li><a href="https://www.eintracht.de/">Eintracht Frankfurt Eagles</a></li>
+                <li><a href="https://www.ogcnice.com/">OGC Nice Eaglets</a></li>
+                <li><a href="https://www.sscalciobari.it/">S.S.C. Bari Cockerels</a></li>
                 <li><a href="https://www.portimonense.pt/">Portimonense S.C. Birds (?)</a></li>
-                <li><a href="https://www.palermofc.com/">Palermo F.C. Birds (?)</a></li>
-                <li><a href="https://www.alahlyegypt.com/">Al Ahly SC Birds (?)</a></li>
+                <li><a href="https://www.palermofc.com/">Palermo F.C. Eagles</a></li>
+                <li><a href="https://www.alahlyegypt.com/">Al Ahly SC Eagles</a></li>
                 <li><a href="https://www.goaheadeagles.nl/">Go Ahead Eagles</a></li>
                 <li><a href="https://azzurri.net.au/">Adelaide Blue Eagles</a></li>
+                <li><a href="https://www.sslazio.it/">S.S. Lazio Eagles</a></li>
+                <li><a href="https://www.bjk.com.tr/">Beşiktaş Black Eagles</a></li>
+                <li><a href="https://www.clubamerica.com.mx/">Club América Eagles</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -309,6 +325,9 @@
                 <li><a href="https://www.mlb.com/milb/toledo">Toledo Mud Hens</a></li>
                 <li><a href="https://www.mlb.com/milb/akron">Akron RubberDucks</a></li>
                 <li><a href="https://www.mlb.com/milb/memphis">Memphis Redbirds</a></li>
+                <li><a href="https://www.mlb.com/milb/myrtle-beach">Myrtle Beach Pelicans</a></li>
+                <li><a href="https://www.mlb.com/milb/springfield">Springfield Cardinals</a></li>
+                <li><a href="https://liducks.com/">Long Island Ducks</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -318,8 +337,8 @@
               </div>
               <ul>
                 <li><a href="https://www.connachtrugby.ie/">Connacht Rugby Eagles</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Namibia_national_rugby_union_team">Namibia Rugby Fish Eagles</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/American_Raptors">American Raptors</a></li>
+                <li><a href="https://uru.org.uy/">Uruguay Los Teros</a></li>
+                <li><a href="https://hullkr.co.uk/">Hull KR Robins</a></li>
                 <li><a href="https://www.roosters.com.au/">Sydney Roosters</a></li>
                 <li><a href="https://www.seaeagles.com.au/">Manly Sea Eagles</a></li>
                 <li><a href="https://www.ospreysrugby.com/">Ospreys</a></li>
@@ -330,12 +349,13 @@
             <div class="sport-teams">
               <div class="sport-header">
                 <i class="fa-solid fa-court-sport"></i>
-                <h4>MLS</h4>
+                <h4>MLS &amp; USL</h4>
               </div>
               <ul>
                 <li><a href="https://www.dcunited.com/">DC United Eagles</a></li>
-                <li><a href="https://www.intermiamicf.com/">Inter Miami CF Flamingos</a></li>
+                <li><a href="https://www.intermiamicf.com/">Inter Miami CF Herons</a></li>
                 <li><a href="https://www.mnufc.com/">Minnesota United Loons</a></li>
+                <li><a href="https://www.phxrisingfc.com/">Phoenix Rising FC</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -346,12 +366,12 @@
               <ul>
                 <li><a href="https://goairforcefalcons.com/">United States Air Force Falcons</a></li>
                 <li><a href="https://kuathletics.com/">Kansas Jayhawks</a></li>
-                <li><a href="https://fgcuathletics.com/">Florida Gulf Coast Eagles</a></li>
+                <li><a href="https://gocards.com/">Louisville Cardinals</a></li>
                 <li><a href="https://hopkinssports.com/">Johns Hopkins Blue Jays</a></li>
-                <li><a href="https://gobrynmawr.com/">Bryn Mawr Predator Owls</a></li>
-                <li><a href="https://unfospreys.com/">North Florida Ospreys</a></li>
+                <li><a href="https://gamecocksonline.com/">South Carolina Gamecocks</a></li>
+                <li><a href="https://riceowls.com/">Rice Owls</a></li>
                 <li><a href="https://owlsports.com/">Temple Owls</a></li>
-                <li><a href="https://gomarquette.com/">Marquette Golden Eagles</a></li>
+                <li><a href="https://southernmiss.com/">Southern Miss Golden Eagles</a></li>
                 <li><a href="https://bceagles.com/">Boston College Eagles</a></li>
                 <li><a href="https://goducks.com/">Oregon Ducks</a></li>
                 <li><a href="https://bluehens.com/">Delaware Blue Hens</a></li>
@@ -380,7 +400,7 @@
                 <li><a href="https://www.hawthornfc.com.au/aflw">Hawthorn Hawks</a></li>
                 <li><a href="https://www.sydneyswans.com.au/aflw">Sydney Swans</a></li>
                 <li><a href="https://www.westcoasteagles.com.au/teams/aflw">West Coast Eagles</a></li>
-                <li><a href="https://www.collingwoodfc.com.au/">Collingwood Magpies</a></li>
+                <li><a href="https://www.collingwoodfc.com.au/teams/aflw">Collingwood Magpies</a></li>
               </ul>
             </div>
             <div class="sport-teams">
@@ -393,6 +413,7 @@
                 <li><a href="https://www.rakuteneagles.jp/">Tohoku Rakuten Golden Eagles</a></li>
                 <li><a href="https://www.yakult-swallows.co.jp/">Tokyo Yakult Swallows</a></li>
                 <li><a href="https://www.hanwhaeagles.co.kr/">Hanwha Eagles</a></li>
+                <li><a href="https://www.tsghawks.com/">TSG Hawks</a></li>
               </ul>
             </div>
           </div>
@@ -414,17 +435,12 @@
                   <b>Aves</b> class of animal, and Bird Teams by extension.
                 </div>
                 <div class="kg-bookmark-metadata">
-                  <a
-                    href="https://static.change.org/favicons/favicon-114x114.png"
-                    data-caption=""
-                  >
-                    <img
-                      class="kg-bookmark-icon"
-                      src="https://static.change.org/favicons/favicon-114x114.png"
-                      alt=""
-                      data-rjs="2"
-                    />
-                  </a>
+                  <img
+                    class="kg-bookmark-icon"
+                    src="https://static.change.org/favicons/favicon-114x114.png"
+                    alt=""
+                    data-rjs="2"
+                  />
                   <div class="authors">
                     <span class="kg-bookmark-author">Broiest Bro started this petition to NHL</span>
                     <span class="kg-bookmark-publisher">Change.org</span>
