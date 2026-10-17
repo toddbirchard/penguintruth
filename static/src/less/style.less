@@ -549,6 +549,18 @@ html {
 
       .citation-title {
         font-family: @body-font-book;
+
+        a {
+          color: inherit;
+          text-decoration: underline;
+          text-decoration-color: #a8adb1;
+          transition: all .2s ease-out;
+
+          &:hover {
+            color: #e06d72;
+            text-decoration-color: #e06d72;
+          }
+        }
       }
 
       .citation-pub {
